@@ -40,6 +40,27 @@ const getProjectScreens = async (projectId, screenId) => {
   }
 };
 
+const getLayerData = async (screen, projectId) => {
+  const { id } = screen;
+  const { data } = await zeplin.screens.getLatestScreenVersion(projectId, id);
+
+  return data.layers.map((layer) => {
+    return {
+      screenId: id,
+      id: layer.id,
+      sourceId: layer.sourceId,
+      name: layer.name,
+      type: layer.type,
+      rect: {
+        width: layer.rect.width,
+        height: layer.rect.height,
+        x: layer.rect.x,
+        y: layer.rect.y,
+      },
+    };
+  });
+};
+
 const getAssetData = async (screen, projectId, formats, densities) => {
   const { id, name } = screen;
   const { data } = await zeplin.screens.getLatestScreenVersion(projectId, id);
@@ -59,13 +80,6 @@ const getAssetData = async (screen, projectId, formats, densities) => {
       filename: `${displayName.replaceAll("/", "-")}-${density}x.${format}`,
     }));
   });
-};
-
-const getLayerData = async (screen, projectId) => {
-  const { id } = screen;
-  const { data } = await zeplin.screens.getLatestScreenVersion(projectId, id);
-
-  return { screenId: id, layers: data.layers };
 };
 
 const downloadAsset = async ({ name, url, filename }, dir, progress) => {
@@ -91,19 +105,6 @@ let metadata = {
     template: {
       id: null,
       name: null,
-      assets: {
-        template: {
-          displayName: null,
-          filename: null,
-          format: null,
-          density: null,
-          layer: {
-            id: null,
-            name: null,
-          },
-        },
-        data: [],
-      },
       layers: {
         template: {
           id: null,
@@ -116,6 +117,15 @@ let metadata = {
             x: 0,
             y: 0,
           },
+          assets: {
+            template: {
+              displayName: null,
+              filename: null,
+              format: null,
+              density: null,
+            },
+            data: [],
+          }
         },
         data: [],
       },
@@ -139,76 +149,50 @@ const updateMetadata = {
     });
     delete metadata.screens.template;
   },
+  layers: (layers) => {
+    layers.forEach((layer) => {
+      let screenIndex = metadata.screens.data.findIndex((screen) => screen.id === layer.screenId);
+      if (screenIndex !== -1) {
+        let template = JSON.parse(JSON.stringify(metadata.screens.data[screenIndex].layers.template));
+        template.id = layer.id;
+        template.sourceId = layer.sourceId;
+        template.name = layer.name;
+        template.type = layer.type;
+        template.rect.width = layer.rect.width;
+        template.rect.height = layer.rect.height;
+        template.rect.x = layer.rect.x;
+        template.rect.y = layer.rect.y;
+
+        metadata.screens.data[screenIndex].layers.data.push(template);
+      } else {
+        console.log(`Error: Unable to identify screen for layer ${layer.name}`);
+      }
+    });
+    metadata.screens.data.forEach((screen) => {
+      delete screen.layers.template;
+    });
+  },
   assets: (assets) => {
     assets.forEach((asset) => {
       let screenIndex = metadata.screens.data.findIndex((screen) => screen.id === asset.screenId);
-      if (screenIndex !== -1) {
-        let template = JSON.parse(JSON.stringify(metadata.screens.data[screenIndex].assets.template));
+      let layerIndex = metadata.screens.data[screenIndex].layers.data.findIndex((layer) => layer.sourceId === asset.layerSourceId);
+      if (screenIndex !== -1 && layerIndex !== -1) {
+        let template = JSON.parse(JSON.stringify(metadata.screens.data[screenIndex].layers.data[layerIndex].assets.template));
         template.displayName = asset.displayName;
         template.filename = asset.filename;
         template.format = asset.format;
         template.density = asset.density;
-        template.layer.id = asset.layerSourceId;
-        template.layer.name = asset.layerName;
-        metadata.screens.data[screenIndex].assets.data.push(template);
+        metadata.screens.data[screenIndex].layers[layerIndex].assets.data.push(template);
+      } else {
+        console.log(`Error: Unable to identify layer for asset ${asset.displayName}`);
       }
     });
     metadata.screens.data.forEach((screen) => {
-      delete screen.assets.template;
-    });
-  },
-  layers: (screensLayers) => {
-    screensLayers.forEach((screenLayers) => {
-      let screenIndex = metadata.screens.data.findIndex((screen) => screen.id === screenLayers.screenId);
-      if (screenIndex !== -1) {
-        metadata.screens.data[screenIndex].layers.data = screenLayers.layers;
-      }
-    });
-    // remove absolute position
-    metadata.screens.data.forEach((screen) => {
       screen.layers.data.forEach((layer) => {
-        delete layer.rect.absolute
-      });
-    });    
-    // align layer fields with template
-    metadata.screens.data.forEach((screen) => {
-      screen.layers.data.forEach((layer) => {
-        layer = updateMetadata.alignLayerFieldsWithTemplate(layer, screen.layers.template);
+        delete layer.assets.template;
       });
     });
-    // remove template
-    metadata.screens.data.forEach((screen) => {
-      delete screen.layers.template;
-    });
-    //combine layers and assets
-    metadata.screens.data.forEach((screen) => {
-      screen.assets.data.forEach((asset) => {
-        screen.layers.data.forEach((layer) => {
-          updateMetadata.updateLayerWithAsset(asset, layer)
-        });
-      });
-    });
-  },
-  alignLayerFieldsWithTemplate: (layer, template) => {
-    let layerKeys = Object.keys(layer);
-    let templateKeys = Object.keys(template);
-    let keysToRemove = layerKeys.filter((key) => !templateKeys.includes(key));
-    keysToRemove.forEach((key) => {
-      delete layer[key];
-    });
-    if (layer.layers) {
-      layer.layers = layer.layers.map((layer) => updateMetadata.alignLayerFieldsWithTemplate(layer, template));
-    }
-    return layer;
-  },
-  updateLayerWithAsset: (asset, layer) => {
-    if (layer.sourceId == asset.layer.id) {
-      layer.asset = asset;
-    }
-    if (layer.layers) {
-      layer.layers.forEach((layer) => updateMetadata.updateLayerWithAsset(asset, layer));
-    }
-  },
+  }
 };
 
 const saveMetadata = (folder, data) => {
@@ -236,11 +220,11 @@ program
     const projectScreens = await getProjectScreens(projectId, screenId);
     updateMetadata.screens(projectScreens);
 
+    const layers = await Promise.all(projectScreens.map(async (screen) => getLayerData(screen, projectId)));
+    updateMetadata.layers(layers);
+
     const assets = (await Promise.all(projectScreens.map(async (screen) => getAssetData(screen, projectId, formats, densities)))).flat();
     updateMetadata.assets(assets);
-
-    const screensLayers = await Promise.all(projectScreens.map(async (screen) => getLayerData(screen, projectId)));
-    updateMetadata.layers(screensLayers);
 
     const assetsBar = new Progress("  Downloading project assets [:bar] :rate/bps :percent :etas", {
       complete: "=",

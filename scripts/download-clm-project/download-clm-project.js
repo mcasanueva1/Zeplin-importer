@@ -115,12 +115,7 @@ let metadata = {
             height: null,
             x: 0,
             y: 0,
-            absolute: {
-              x: 0,
-              y: 0,
-            },
           },
-          layers: [],
         },
         data: [],
       },
@@ -169,10 +164,10 @@ const updateMetadata = {
         metadata.screens.data[screenIndex].layers.data = screenLayers.layers;
       }
     });
-    // trim layers tree
+    // align layer fields with template
     metadata.screens.data.forEach((screen) => {
       screen.layers.data.forEach((layer) => {
-        layer = updateMetadata.trimLayersFields(layer, screen.layers.template);
+        layer = updateMetadata.alignLayerFieldsWithTemplate(layer, screen.layers.template);
       });
     });
     // remove template
@@ -187,14 +182,14 @@ const updateMetadata = {
         });
       });
     });
-    //remove branches without assets
+    /*//remove branches without assets
     metadata.screens.data.forEach((screen) => {
       screen.layers.data.forEach((layer) => {
         updateMetadata.nullLayerIfNoAssets(layer);
       });
-    });
+    });*/
   },
-  trimLayersFields: (layer, template) => {
+  alignLayerFieldsWithTemplate: (layer, template) => {
     let layerKeys = Object.keys(layer);
     let templateKeys = Object.keys(template);
     let keysToRemove = layerKeys.filter((key) => !templateKeys.includes(key));
@@ -202,7 +197,7 @@ const updateMetadata = {
       delete layer[key];
     });
     if (layer.layers) {
-      layer.layers = layer.layers.map((layer) => updateMetadata.trimLayersFields(layer, template));
+      layer.layers = layer.layers.map((layer) => updateMetadata.alignLayerFieldsWithTemplate(layer, template));
     }
     return layer;
   },
@@ -214,7 +209,7 @@ const updateMetadata = {
       layer.layers.forEach((layer) => updateMetadata.updateLayerWithAsset(asset, layer));
     }
   },
-  nullLayerIfNoAssets: (layer) => {
+  /*nullLayerIfNoAssets: (layer) => {
     if (!updateMetadata.layerBranchContainsAsset(layer)) {
       layer = null;
     } else {
@@ -233,7 +228,7 @@ const updateMetadata = {
         return false;
       }
     }
-  },
+  },*/
 };
 
 const saveMetadata = (folder, data) => {

@@ -164,6 +164,12 @@ const updateMetadata = {
         metadata.screens.data[screenIndex].layers.data = screenLayers.layers;
       }
     });
+    // remove absolute position
+    metadata.screens.data.forEach((screen) => {
+      screen.layers.data.forEach((layer) => {
+        delete layer.rect.absolute
+      });
+    });    
     // align layer fields with template
     metadata.screens.data.forEach((screen) => {
       screen.layers.data.forEach((layer) => {
@@ -182,12 +188,6 @@ const updateMetadata = {
         });
       });
     });
-    /*//remove branches without assets
-    metadata.screens.data.forEach((screen) => {
-      screen.layers.data.forEach((layer) => {
-        updateMetadata.nullLayerIfNoAssets(layer);
-      });
-    });*/
   },
   alignLayerFieldsWithTemplate: (layer, template) => {
     let layerKeys = Object.keys(layer);
@@ -209,26 +209,6 @@ const updateMetadata = {
       layer.layers.forEach((layer) => updateMetadata.updateLayerWithAsset(asset, layer));
     }
   },
-  /*nullLayerIfNoAssets: (layer) => {
-    if (!updateMetadata.layerBranchContainsAsset(layer)) {
-      layer = null;
-    } else {
-      if (layer.layers) {
-        layer.layers.forEach((layer) => updateMetadata.nullLayerIfNoAssets(layer));
-      }
-    }
-  },
-  layerBranchContainsAsset: (layer) => {
-    if (layer.asset) {
-      return true;
-    } else {
-      if (layer.layers) {
-        return layer.layers.some((layer) => updateMetadata.layerBranchContainsAsset(layer));
-      } else {
-        return false;
-      }
-    }
-  },*/
 };
 
 const saveMetadata = (folder, data) => {

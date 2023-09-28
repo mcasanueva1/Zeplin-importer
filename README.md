@@ -1,4 +1,4 @@
-# Zeplin Community Crew: SDK Scripts
+# Zeplin Importer
 
 ## Getting Started
 

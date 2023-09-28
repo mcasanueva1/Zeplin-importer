@@ -44,7 +44,7 @@ const getLayerData = async (screen, projectId) => {
   const { id } = screen;
   const { data } = await zeplin.screens.getLatestScreenVersion(projectId, id);
 
-  return data.layers.map((layer) => {
+  return data.layers.flatMap((layer) => {
     return {
       screenId: id,
       id: layer.id,
@@ -109,8 +109,6 @@ let metadata = {
         template: {
           id: null,
           sourceId: null,
-          name: null,
-          type: null,
           rect: {
             width: null,
             height: null,
@@ -125,7 +123,7 @@ let metadata = {
               density: null,
             },
             data: [],
-          }
+          },
         },
         data: [],
       },
@@ -150,14 +148,12 @@ const updateMetadata = {
     delete metadata.screens.template;
   },
   layers: (layers) => {
-    layers.forEach((layer) => {
+    layers.flat().forEach((layer) => {
       let screenIndex = metadata.screens.data.findIndex((screen) => screen.id === layer.screenId);
       if (screenIndex !== -1) {
         let template = JSON.parse(JSON.stringify(metadata.screens.data[screenIndex].layers.template));
         template.id = layer.id;
         template.sourceId = layer.sourceId;
-        template.name = layer.name;
-        template.type = layer.type;
         template.rect.width = layer.rect.width;
         template.rect.height = layer.rect.height;
         template.rect.x = layer.rect.x;
@@ -173,18 +169,22 @@ const updateMetadata = {
     });
   },
   assets: (assets) => {
-    assets.forEach((asset) => {
+    assets.flat().forEach((asset) => {
       let screenIndex = metadata.screens.data.findIndex((screen) => screen.id === asset.screenId);
-      let layerIndex = metadata.screens.data[screenIndex].layers.data.findIndex((layer) => layer.sourceId === asset.layerSourceId);
-      if (screenIndex !== -1 && layerIndex !== -1) {
-        let template = JSON.parse(JSON.stringify(metadata.screens.data[screenIndex].layers.data[layerIndex].assets.template));
-        template.displayName = asset.displayName;
-        template.filename = asset.filename;
-        template.format = asset.format;
-        template.density = asset.density;
-        metadata.screens.data[screenIndex].layers[layerIndex].assets.data.push(template);
+      if (screenIndex !== -1) {
+        let layerIndex = metadata.screens.data[screenIndex].layers.data.findIndex((layer) => layer.sourceId === asset.layerSourceId);
+        if (screenIndex !== -1 && layerIndex !== -1) {
+          let template = JSON.parse(JSON.stringify(metadata.screens.data[screenIndex].layers.data[layerIndex].assets.template));
+          template.displayName = asset.displayName;
+          template.filename = asset.filename;
+          template.format = asset.format;
+          template.density = asset.density;
+          metadata.screens.data[screenIndex].layers.data[layerIndex].assets.data.push(template);
+        } else {
+          console.log(`Error: Unable to identify layer for asset ${asset.displayName}`);
+        }
       } else {
-        console.log(`Error: Unable to identify layer for asset ${asset.displayName}`);
+        console.log(`Error: Unable to identify screen for asset ${asset.displayName}`);
       }
     });
     metadata.screens.data.forEach((screen) => {
@@ -192,7 +192,7 @@ const updateMetadata = {
         delete layer.assets.template;
       });
     });
-  }
+  },
 };
 
 const saveMetadata = (folder, data) => {
@@ -223,7 +223,7 @@ program
     const layers = await Promise.all(projectScreens.map(async (screen) => getLayerData(screen, projectId)));
     updateMetadata.layers(layers);
 
-    const assets = (await Promise.all(projectScreens.map(async (screen) => getAssetData(screen, projectId, formats, densities)))).flat();
+    const assets = await Promise.all(projectScreens.map(async (screen) => getAssetData(screen, projectId, formats, densities)));
     updateMetadata.assets(assets);
 
     const assetsBar = new Progress("  Downloading project assets [:bar] :rate/bps :percent :etas", {

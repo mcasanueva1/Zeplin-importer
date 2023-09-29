@@ -131,7 +131,7 @@ let metadata = {
     data: [],
   },
 };
-const updateMetadata = {
+const mF = {
   projectId: (projectId) => {
     metadata.project.id = projectId;
   },
@@ -193,14 +193,13 @@ const updateMetadata = {
       });
     });
   },
-};
-
-const saveMetadata = (folder, data) => {
-  fs.writeFile(`${folder}/metadata.json`, JSON.stringify(data, null, 2), (err) => {
-    if (err) {
-      console.log(err);
-    }
-  });
+  save: (folder, data) => {
+    fs.writeFile(`${folder}/metadata.json`, JSON.stringify(data, null, 2), (err) => {
+      if (err) {
+        console.log(err);
+      }
+    });
+  }
 };
 
 // add command line options
@@ -212,19 +211,19 @@ program
   .option("-f, --formats <formats...>", "Formats to download", ["png", "jpg", "webp", "svg", "pdf"])
   .option("-e, --densities <density...>", "Density to download", ["1", "1.5", "2", "3", "4"])
   .action(async ({ projectId, screenId, metadataOnly, directory, formats, densities }) => {
-    updateMetadata.projectId(projectId);
+    mF.projectId(projectId);
 
     const { name: projectName } = await getProjectProperties(projectId);
-    updateMetadata.projectName(projectName);
+    mF.projectName(projectName);
 
     const projectScreens = await getProjectScreens(projectId, screenId);
-    updateMetadata.screens(projectScreens);
+    mF.screens(projectScreens);
 
     const layers = await Promise.all(projectScreens.map(async (screen) => getLayerData(screen, projectId)));
-    updateMetadata.layers(layers);
+    mF.layers(layers);
 
     const assets = await Promise.all(projectScreens.map(async (screen) => getAssetData(screen, projectId, formats, densities)));
-    updateMetadata.assets(assets);
+    mF.assets(assets);
 
     const assetsBar = new Progress("  Downloading project assets [:bar] :rate/bps :percent :etas", {
       complete: "=",
@@ -240,12 +239,12 @@ program
     const limit = pLimit(20);
 
     if (!metadataOnly) {
-      const downloadAssetPromises = assets.map((asset) => limit(() => downloadAsset(asset, directory, assetsBar)));
+      const downloadAssetPromises = assets.flat().map((asset) => limit(() => downloadAsset(asset, directory, assetsBar)));
 
       await Promise.all(downloadAssetPromises);
     }
 
-    saveMetadata(directory, metadata);
+    mF.save(directory, metadata);
   });
 
 program.parse(process.argv);

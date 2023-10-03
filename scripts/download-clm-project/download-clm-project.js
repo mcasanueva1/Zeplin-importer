@@ -207,7 +207,7 @@ const mF = {
         configContents = configContents.replaceAll("\n", "");
         configContents = configContents.replaceAll("“", '"');
         configContents = configContents.replaceAll("”", '"');
-console.log(configContents)
+
         let configJSON 
         try {
           configJSON = JSON.parse(configContents);

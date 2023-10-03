@@ -40,7 +40,7 @@ const getProjectScreens = async (projectId, screenId) => {
   }
 };
 
-const getLayerData = async (screen, projectId) => {
+const getLayersData = async (screen, projectId) => {
   const { id } = screen;
   const { data } = await zeplin.screens.getLatestScreenVersion(projectId, id);
 
@@ -57,6 +57,7 @@ const getLayerData = async (screen, projectId) => {
         x: layer.rect.x,
         y: layer.rect.y,
       },
+      content: layer.content,
     };
   });
 };
@@ -82,13 +83,13 @@ const getAssetData = async (screen, projectId, formats, densities) => {
   });
 };
 
-const downloadAsset = async ({ name, url, filename }, dir, progress) => {
+const downloadAsset = async ({ screenName, url, filename }, dir, progress) => {
   try {
     const { data } = await axios.get(url, { responseType: "stream" });
-    await fs.mkdir(`${dir}/${name}`, { recursive: true });
-    await fs.writeFile(`${dir}/${name}/${filename}`, data);
+    await fs.mkdir(`${dir}/${screenName}`, { recursive: true });
+    await fs.writeFile(`${dir}/${screenName}/${filename}`, data);
   } catch (err) {
-    console.log(`Error downloading ${name}`);
+    console.log(`Error downloading ${screenName}`);
     console.log(err.config.url);
   }
   progress.tick();
@@ -105,9 +106,11 @@ let metadata = {
     template: {
       id: null,
       name: null,
+      config: null,
       layers: {
         template: {
           id: null,
+          name: null,
           sourceId: null,
           rect: {
             width: null,
@@ -124,6 +127,7 @@ let metadata = {
             },
             data: [],
           },
+          content: null
         },
         data: [],
       },
@@ -153,11 +157,13 @@ const mF = {
       if (screenIndex !== -1) {
         let template = JSON.parse(JSON.stringify(metadata.screens.data[screenIndex].layers.template));
         template.id = layer.id;
+        template.name = layer.name;
         template.sourceId = layer.sourceId;
         template.rect.width = layer.rect.width;
         template.rect.height = layer.rect.height;
         template.rect.x = layer.rect.x;
         template.rect.y = layer.rect.y;
+        template.content = layer.content;
 
         metadata.screens.data[screenIndex].layers.data.push(template);
       } else {
@@ -193,6 +199,30 @@ const mF = {
       });
     });
   },
+  config: () => {
+    metadata.screens.data.forEach((screen) => {
+      let configLayer = screen.layers.data.find((layer) => layer.name === "Config box");
+      if (configLayer) {
+        let configContents = configLayer.content;
+        configContents = configContents.replaceAll("\n", "");
+        configContents = configContents.replaceAll("“", '"');
+        configContents = configContents.replaceAll("”", '"');
+console.log(configContents)
+        let configJSON 
+        try {
+          configJSON = JSON.parse(configContents);
+        } catch (err) {
+          console.log(`Error parsing JSON for screen ${screen.name}`);
+          console.log(err);
+        }
+
+        screen.config = configJSON;
+
+      } else {
+        console.log(`Error: Unable to find config layer for screen ${screen.name}`);
+      }
+    });
+  },
   save: (folder, data) => {
     fs.writeFile(`${folder}/metadata.json`, JSON.stringify(data, null, 2), (err) => {
       if (err) {
@@ -219,17 +249,19 @@ program
     const projectScreens = await getProjectScreens(projectId, screenId);
     mF.screens(projectScreens);
 
-    const layers = await Promise.all(projectScreens.map(async (screen) => getLayerData(screen, projectId)));
+    const layers = await Promise.all(projectScreens.map(async (screen) => getLayersData(screen, projectId)));
     mF.layers(layers);
 
     const assets = await Promise.all(projectScreens.map(async (screen) => getAssetData(screen, projectId, formats, densities)));
     mF.assets(assets);
 
+    mF.config();
+
     const assetsBar = new Progress("  Downloading project assets [:bar] :rate/bps :percent :etas", {
       complete: "=",
       incomplete: " ",
       width: 20,
-      total: assets.length,
+      total: assets.flat().length,
     });
 
     // Remove existing Output folder and create new one at start of script

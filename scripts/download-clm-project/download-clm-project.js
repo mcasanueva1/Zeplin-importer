@@ -203,6 +203,7 @@ const mF = {
     metadata.screens.data.forEach((screen) => {
       let configLayer = screen.layers.data.find((layer) => layer.name === "Config box");
       if (configLayer) {
+        
         let configContents = configLayer.content;
         configContents = configContents.replaceAll("\n", "");
         configContents = configContents.replaceAll("“", '"');

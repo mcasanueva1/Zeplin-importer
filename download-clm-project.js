@@ -31,22 +31,13 @@ const getProjectProperties = async (projectId) => {
   return data;
 };
 
-const getProjectScreens = async (projectId, screenId) => {
-  let screensCount = metadata.project.screensCount;
-  let pageLimit = 30;
-  let screensDownloaded = 0;
-  let screensData = [];
-
-  do {
-    const { data } = await zeplin.screens.getProjectScreens(projectId, { offset: screensDownloaded, limit: pageLimit });
-    screensData = screensData.concat(data);
-    screensDownloaded += data.length;
-  } while (screensDownloaded < screensCount - 1);
+const getProjectScreens = async (projectId, screenId, offset, limit) => {
+  const { data } = await zeplin.screens.getProjectScreens(projectId, { offset: offset, limit: limit });
 
   if (screenId) {
-    return screensData.filter((screen) => screen.id === screenId);
+    return data.filter((screen) => screen.id === screenId);
   } else {
-    return screensData;
+    return data;
   }
 };
 
@@ -176,7 +167,6 @@ const mF = {
       template.name = screen.name;
       metadata.screens.data.push(template);
     });
-    delete metadata.screens.template;
   },
   layers: (layers) => {
     layers.flat().forEach((layer) => {
@@ -280,22 +270,25 @@ const mF = {
     });
   },
   save: (folder, data) => {
-    fs.writeFile(`${folder}/metadata.json`, JSON.stringify(data, null, 2), (err) => {
+    fs.writeFile(`${folder}/__metadata.json`, JSON.stringify(data, null, 2), (err) => {
       if (err) {
         activityLog.add(err);
       }
     });
+  },
+  cleanUp: () => {
+    delete metadata.screens.template;
   },
 };
 
 const activityLog = {
   data: "",
   add: (data) => {
-    console.log(data);
+    //console.log(data);
     activityLog.data = activityLog.data + "\n" + data;
   },
   save: (folder) => {
-    fs.writeFile(`${folder}/log.txt`, activityLog.data, (err) => {
+    fs.writeFile(`${folder}/__log.txt`, activityLog.data, (err) => {
       if (err) {
         activityLog.add(err);
       }
@@ -313,42 +306,55 @@ program
   .action(async ({ projectId, screenId, metadataOnly, formats, densities }) => {
     mF.projectId(projectId);
 
+    //project properties
     const { name: projectName, numberOfScreens: screensCount } = await getProjectProperties(projectId);
     mF.projectName(projectName);
     mF.projectScreens(screensCount);
 
-    const projectScreens = await getProjectScreens(projectId, screenId);
-    mF.screens(projectScreens);
-
-    const layers = await Promise.all(projectScreens.map(async (screen) => getLayersData(screen, projectId)));
-    mF.layers(layers);
-
-    const assets = await Promise.all(projectScreens.map(async (screen) => getAssetData(screen, projectId, formats, densities)));
-    mF.assets(assets);
-
-    mF.config();
-
-    const assetsBar = new Progress("  Downloading project assets [:bar] :rate/bps :percent :etas", {
-      complete: "=",
-      incomplete: " ",
-      width: 20,
-      total: assets.flat().length,
-    });
+    //output folde
     let desktopPath = path.join(process.env.HOME, "Desktop");
     let directory = path.join(desktopPath, metadata.project.name.replaceAll("/", "-") + "__assets");
-
-    // Remove existing Output folder and create new one
     await fs.rm(directory, { recursive: true, force: true });
     await fs.mkdir(directory);
 
-    const limit = pLimit(20);
+    //screens pagination loop
+    let pageLimit = 30;
+    let screensProcessed = 0;
+    do {
+      console.log(`Processing screens ${screensProcessed} to ${screensProcessed + pageLimit} of ${screensCount}`);
 
-    if (!metadataOnly) {
-      const downloadAssetPromises = assets.flat().map((asset) => limit(() => downloadAsset(asset, directory, assetsBar)));
+      const screensBatch = await getProjectScreens(projectId, screenId, screensProcessed, pageLimit);
+      mF.screens(screensBatch);
 
-      await Promise.all(downloadAssetPromises);
-    }
+      const layers = await Promise.all(screensBatch.map(async (screen) => getLayersData(screen, projectId)));
+      mF.layers(layers);
 
+      const assets = await Promise.all(screensBatch.map(async (screen) => getAssetData(screen, projectId, formats, densities)));
+      mF.assets(assets);
+
+      //progress bar
+      const assetsBar = new Progress("  Downloading project assets [:bar] :rate/bps :percent :etas", {
+        complete: "=",
+        incomplete: " ",
+        width: 20,
+        total: assets.flat().length,
+      });
+
+      //download assets
+      if (!metadataOnly) {
+        const limit = pLimit(20);
+        const downloadAssetPromises = assets.flat().map((asset) => limit(() => downloadAsset(asset, directory, assetsBar)));
+
+        await Promise.all(downloadAssetPromises);
+      }
+
+      screensProcessed += screensBatch.length;
+    } while (screensProcessed < screensCount - 1);
+
+    //parse screens config
+    mF.config();
+
+    //save metadata and log
     mF.save(directory, metadata);
 
     activityLog.save(directory);

@@ -1,0 +1,45 @@
+
+Error: Unable to find config layer for screen 0.0.0.0.0.P2.0.0.0_Home_AdditionalInfoPDF
+Error: Unable to find config layer for screen 1.2.0.0.0.P2.1.0.0_PatientTypes_Type2Asthma_ElevatedBiomarkers 
+Error: Unable to find config layer for screen 1.2.0.0.0.P2.1.1.0_PatientTypes_Type2Asthma_ElevatedBiomarkers_Notes
+Warning: rect dimensions for l_btnStart-inL3-1x.png do not match actual file dimensions. Rect: 184x40 Actual: 202x58
+Warning: rect dimensions for l_imgbg-1x.png do not match actual file dimensions. Rect: 1024x768 Actual: 1024x780
+Warning: rect dimensions for l_modalindications_content-1x.png do not match actual file dimensions. Rect: 1024x408 Actual: 1042x426
+Warning: rect dimensions for l_btnChildren-r1-1x.png do not match actual file dimensions. Rect: 288x80 Actual: 306x98
+Warning: rect dimensions for l_modalObject_legal-1x.png do not match actual file dimensions. Rect: 1024x216 Actual: 1042x234
+Warning: rect dimensions for l_btnOCS-r1-1x.png do not match actual file dimensions. Rect: 288x80 Actual: 306x98
+Warning: rect dimensions for l_btnType2-r1-1x.png do not match actual file dimensions. Rect: 288x80 Actual: 306x98
+Warning: rect dimensions for l_text03-r3-1x.png do not match actual file dimensions. Rect: 440x71.9921875 Actual: 458x90
+Warning: rect dimensions for l_text02-r2-1x.png do not match actual file dimensions. Rect: 752x328 Actual: 770x339
+Warning: rect dimensions for l_tab01_cover_btn01-r3-1x.png do not match actual file dimensions. Rect: 216x40 Actual: 234x58
+Warning: rect dimensions for l_text02-r2-1x.png do not match actual file dimensions. Rect: 928x344 Actual: 946x355
+Warning: rect dimensions for l_text02-r2-1x.png do not match actual file dimensions. Rect: 928x280 Actual: 946x291
+Warning: rect dimensions for l_text02-r2-1x.png do not match actual file dimensions. Rect: 703.999755859375x412 Actual: 722x423
+Warning: rect dimensions for l_tab02_cover_btn02-r4-1x.png do not match actual file dimensions. Rect: 216x40 Actual: 234x58
+Warning: rect dimensions for l_tab01_content01-1x.png do not match actual file dimensions. Rect: 720x656 Actual: 738x667
+Warning: rect dimensions for l_modalObject_legal-1x.png do not match actual file dimensions. Rect: 1024x280 Actual: 1042x298
+Warning: rect dimensions for l_modalObject_legal-1x.png do not match actual file dimensions. Rect: 1024x336 Actual: 1042x354
+Warning: rect dimensions for l_modalObject_legal-1x.png do not match actual file dimensions. Rect: 1024x280 Actual: 1042x298
+Warning: rect dimensions for l_tab01_btn01_active-1x.png do not match actual file dimensions. Rect: 232x40 Actual: 250x58
+Warning: rect dimensions for l_tab01_btn02_active-1x.png do not match actual file dimensions. Rect: 232x40 Actual: 250x58
+Warning: rect dimensions for l_tab01_content02-1x.png do not match actual file dimensions. Rect: 720x656 Actual: 738x667
+Warning: rect dimensions for l_text02-r4-1x.png do not match actual file dimensions. Rect: 512x208 Actual: 530x226
+Warning: rect dimensions for l_btnChildren-r1-1x.png do not match actual file dimensions. Rect: 288x80 Actual: 306x98
+Warning: rect dimensions for l_btnType2-r1-1x.png do not match actual file dimensions. Rect: 288x80 Actual: 306x98
+Error reading image l_imgBgPopup-1x.png
+Error: ENOENT: no such file or directory, open 'Sanofi_GLB_DupixentAsthma_23R1__assets/1.2.0.0.0.P2.1.0.0_PatientTypes_Type2Asthma_ElevatedBiomarkers /l_imgBgPopup-1x.png'
+Warning: rect dimensions for l_text03-r3-1x.png do not match actual file dimensions. Rect: 672x376 Actual: 690x394
+Warning: rect dimensions for l_tab01_content01_text02-1x.png do not match actual file dimensions. Rect: 656x248.0009765625 Actual: 674x266
+Warning: rect dimensions for l_btnOCS-r1-1x.png do not match actual file dimensions. Rect: 288x80 Actual: 306x98
+Warning: rect dimensions for l_modalObject_legal-1x.png do not match actual file dimensions. Rect: 1024x320 Actual: 1042x338
+Warning: rect dimensions for l_tab01_content01_btnsTab-1x.png do not match actual file dimensions. Rect: 540x32 Actual: 558x50
+Warning: rect dimensions for l_tab01_content01_text03-1x.png do not match actual file dimensions. Rect: 552x72 Actual: 570x90
+Warning: rect dimensions for l_tab01_content01_text02-1x.png do not match actual file dimensions. Rect: 640x288 Actual: 658x306
+Warning: rect dimensions for l_tab01_content01_btnsTab-1x.png do not match actual file dimensions. Rect: 540x32 Actual: 558x50
+Warning: rect dimensions for l_text02-1x.png do not match actual file dimensions. Rect: 703.999755859375x256 Actual: 722x267
+Warning: rect dimensions for l_text02-1x.png do not match actual file dimensions. Rect: 536x170 Actual: 554x186
+Warning: rect dimensions for l_text03-1x.png do not match actual file dimensions. Rect: 535.999755859375x208 Actual: 554x219
+Warning: rect dimensions for l_tab01_cover_btn01-1x.png do not match actual file dimensions. Rect: 216x40 Actual: 234x58
+Warning: rect dimensions for  l_tab01_cover_btn02-1x.png do not match actual file dimensions. Rect: 216x40 Actual: 234x58
+Warning: rect dimensions for l_text03-1x.png do not match actual file dimensions. Rect: 703.999755859375x148 Actual: 722x159
+Warning: rect dimensions for l_modalObject_legal-1x.png do not match actual file dimensions. Rect: 1024x304 Actual: 1042x322

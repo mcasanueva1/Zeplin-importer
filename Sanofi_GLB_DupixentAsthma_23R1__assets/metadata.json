@@ -1,0 +1,5430 @@
+{
+  "source": "zeplin",
+  "project": {
+    "id": "64df80fe42bf181f547b231c",
+    "name": "Sanofi_GLB_DupixentAsthma_23R1"
+  },
+  "screens": {
+    "data": [
+      {
+        "id": "64df81bf99b34e2186c4fb88",
+        "name": "0.0.0.0.0.P0.0.0.0_Home",
+        "config": {
+          "slideId": "0.0.P0_Home",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651d7e2ca381272d66bb2258",
+              "name": "l_imgbg",
+              "sourceId": "f6a60430-db6f-47d0-84c7-0f2b4df03685",
+              "rect": {
+                "width": 1024,
+                "height": 768,
+                "x": 0,
+                "y": 0
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_imgbg",
+                    "filename": "l_imgbg-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1024,
+                      "height": 780
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb2262",
+              "name": "l_text01-r1",
+              "sourceId": "be1e17b3-23c2-408d-beb4-172734bf1867",
+              "rect": {
+                "width": 806,
+                "height": 134,
+                "x": 109,
+                "y": 56
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text01-r1",
+                    "filename": "l_text01-r1-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 806,
+                      "height": 134
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb2264",
+              "name": "l_text02-r2",
+              "sourceId": "1d2b9f0b-ab49-4edf-a998-64f09a4a7fd9",
+              "rect": {
+                "width": 538,
+                "height": 51,
+                "x": 243,
+                "y": 184
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text02-r2",
+                    "filename": "l_text02-r2-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 540,
+                      "height": 51
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb2266",
+              "name": "l_text03-r3",
+              "sourceId": "de50ec0e-0a26-48d4-bb03-ec22d5f912c9",
+              "rect": {
+                "width": 368,
+                "height": 77,
+                "x": 48,
+                "y": 416
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text03-r3",
+                    "filename": "l_text03-r3-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 368,
+                      "height": 77
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb2268",
+              "name": "l_text04-r4",
+              "sourceId": "486a5039-45b1-4729-872a-14a74c9119da",
+              "rect": {
+                "width": 312,
+                "height": 66,
+                "x": 48,
+                "y": 504
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text04-r4",
+                    "filename": "l_text04-r4-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 312,
+                      "height": 66
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb226a",
+              "name": "l_modalObject_indications_open-r5",
+              "sourceId": "9aa501f0-e25a-4f77-be60-9c7f575d2c46",
+              "rect": {
+                "width": 464,
+                "height": 104,
+                "x": 48,
+                "y": 616
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_indications_open-r5",
+                    "filename": "l_modalObject_indications_open-r5-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 464,
+                      "height": 104
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb226f",
+              "name": "l_btnSmPC-fd4",
+              "sourceId": "8e007938-cabd-40d8-abcd-036f76025566",
+              "rect": {
+                "width": 232,
+                "height": 12,
+                "x": 48,
+                "y": 708
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnSmPC-fd4",
+                    "filename": "l_btnSmPC-fd4-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 233,
+                      "height": 13
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb2272",
+              "name": "l_imgLogo-fd5",
+              "sourceId": "67201bf2-710b-4c4b-a2df-4aa8e7d1d547",
+              "rect": {
+                "width": 224,
+                "height": 89.46484375,
+                "x": 752,
+                "y": 647.5
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_imgLogo-fd5",
+                    "filename": "l_imgLogo-fd5-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 224,
+                      "height": 90
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb22a6",
+              "name": "l_btnSummary-inL5",
+              "sourceId": "046c7f72-9d62-4bd2-9730-2784b0382550",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 792,
+                "y": 552
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnSummary-inL5",
+                    "filename": "l_btnSummary-inL5-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 185,
+                      "height": 41
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb22aa",
+              "name": "l_btnLegacy-inL4",
+              "sourceId": "f1a3eb78-a2b6-4607-b68d-615368324275",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 792,
+                "y": 504
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnLegacy-inL4",
+                    "filename": "l_btnLegacy-inL4-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 185,
+                      "height": 41
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb22ae",
+              "name": "l_btnStart-inL3",
+              "sourceId": "8a6f941e-f737-448a-9e6b-313f6fac9179",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 792,
+                "y": 456
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnStart-inL3",
+                    "filename": "l_btnStart-inL3-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 202,
+                      "height": 58
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb22b2",
+              "name": "c_l_util_btnMailCart",
+              "sourceId": "22a48f69-7c11-4ff6-b471-b254133cf623",
+              "rect": {
+                "width": 48,
+                "height": 48,
+                "x": 512,
+                "y": 0
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "c_l_util_btnMailCart",
+                    "filename": "c_l_util_btnMailCart-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 48,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb22b6",
+              "name": "c_l_util_btnChat",
+              "sourceId": "b0213702-9f11-4751-a198-5caa778450cd",
+              "rect": {
+                "width": 48,
+                "height": 48,
+                "x": 464,
+                "y": 0
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "c_l_util_btnChat",
+                    "filename": "c_l_util_btnChat-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 49,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb22bb",
+              "name": "c_l_btnSafety",
+              "sourceId": "4b75644d-b741-4716-80f4-8c1df59d1acd",
+              "rect": {
+                "width": 48,
+                "height": 48,
+                "x": 832,
+                "y": 0
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "c_l_btnSafety",
+                    "filename": "c_l_btnSafety-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 49,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb22c0",
+              "name": "c_l_modalObject_resources_open",
+              "sourceId": "d4fdb21a-8569-4549-a6f9-f86d95521b63",
+              "rect": {
+                "width": 48,
+                "height": 48,
+                "x": 976,
+                "y": 0
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "c_l_modalObject_resources_open",
+                    "filename": "c_l_modalObject_resources_open-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 49,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb22c5",
+              "name": "c_l_modalObject_references_open",
+              "sourceId": "2566f398-9541-4663-ad12-226bca7b6ab6",
+              "rect": {
+                "width": 48,
+                "height": 48,
+                "x": 928,
+                "y": 0
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "c_l_modalObject_references_open",
+                    "filename": "c_l_modalObject_references_open-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 48,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb22c8",
+              "name": "c_l_modalObject_siteMap_open",
+              "sourceId": "911596b7-0c2f-4ec5-82d1-cfbca3cba18e",
+              "rect": {
+                "width": 48,
+                "height": 48,
+                "x": 880,
+                "y": 0
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "c_l_modalObject_siteMap_open",
+                    "filename": "c_l_modalObject_siteMap_open-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 49,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651d7e2ca381272d66bb22cd",
+              "name": "Config box",
+              "sourceId": "ec3b7263-48be-434e-ba08-7b8307f57589",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “0.0.P0_Home”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df81bf6cb9ba1feb65c26d",
+        "name": "0.0.1.0.0.P0.0.0.0_Home_Indications",
+        "config": {
+          "slideId": "0.0.P0_Home",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28adfdc99f2102272ca9",
+              "name": "l_modalindications_content",
+              "sourceId": "687b71d0-fa03-48a5-b7ef-8597902d6090",
+              "rect": {
+                "width": 1024,
+                "height": 408,
+                "x": 0,
+                "y": 360
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalindications_content",
+                    "filename": "l_modalindications_content-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1042,
+                      "height": 426
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28adfdc99f2102272cad",
+              "name": "l_btnSmPC",
+              "sourceId": "aa0c779e-d6b1-4193-b4cc-b698828dcbe4",
+              "rect": {
+                "width": 418,
+                "height": 24,
+                "x": 48,
+                "y": 696
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnSmPC",
+                    "filename": "l_btnSmPC-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 419,
+                      "height": 25
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28adfdc99f2102272cb0",
+              "name": "l_modalObject_indications_close",
+              "sourceId": "ccf16d47-64d4-4fac-bed8-917e6830e769",
+              "rect": {
+                "width": 40,
+                "height": 40,
+                "x": 976,
+                "y": 368
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_indications_close",
+                    "filename": "l_modalObject_indications_close-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 40,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28adfdc99f2102272cb3",
+              "name": "Config box",
+              "sourceId": "ef8e8655-d270-45e4-9ced-6ff5ae4896c1",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “0.0.P0_Home”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df81c07bac5e0e998a784f",
+        "name": "0.0.0.0.0.P2.0.0.0_Home_AdditionalInfoPDF",
+        "config": null,
+        "layers": {
+          "data": [
+            {
+              "id": "651c277c7fdf9d207b092d9d",
+              "name": "Screenshot 2023-06-06 at 11.04.05",
+              "sourceId": "c0c878cc-93c0-4848-ad02-7beb2757da25",
+              "rect": {
+                "width": 466,
+                "height": 219,
+                "x": 279,
+                "y": 275
+              },
+              "assets": {
+                "data": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df81c0e3f9570e8dd92a10",
+        "name": "0.0.0.0.0.P3.0.0.0_Home_Refs",
+        "config": {
+          "slideId": "0.0.P0_Home",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28aeb1e75b20222f2dd2",
+              "name": "d_referencesBg",
+              "sourceId": "8b676934-157f-4e52-ad30-6e8289e536d8",
+              "rect": {
+                "width": 1024,
+                "height": 328,
+                "x": 0,
+                "y": 48
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28aeb1e75b20222f2dd3",
+              "name": "c_l_modalObject_references_close",
+              "sourceId": "f9e07396-99db-4e89-9e76-91282d7e0b93",
+              "rect": {
+                "width": 48,
+                "height": 56,
+                "x": 928,
+                "y": 0
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "c_l_modalObject_references_close",
+                    "filename": "c_l_modalObject_references_close-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 48,
+                      "height": 56
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28aeb1e75b20222f2dd8",
+              "name": "c_l_referencesTitle",
+              "sourceId": "a12b0308-808c-4f04-854d-24c57f0b9516",
+              "rect": {
+                "width": 1024,
+                "height": 64,
+                "x": 0,
+                "y": 48
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28aeb1e75b20222f2ddb",
+              "name": "c_l_referencesSwitchCurrent",
+              "sourceId": "2c84be7f-2772-41a7-b3a2-44ea13b2afbe",
+              "rect": {
+                "width": 189,
+                "height": 24,
+                "x": 787,
+                "y": 72
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "c_l_referencesSwitchCurrent",
+                    "filename": "c_l_referencesSwitchCurrent-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 190,
+                      "height": 24
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28aeb1e75b20222f2de0",
+              "name": "l_referencesTextCurrent",
+              "sourceId": "34b4d59d-7e31-4c1a-8eb3-8d539a04ec2d",
+              "rect": {
+                "width": 928,
+                "height": 185,
+                "x": 48,
+                "y": 144
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_referencesTextCurrent",
+                    "filename": "l_referencesTextCurrent-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 928,
+                      "height": 185
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28aeb1e75b20222f2de6",
+              "name": "Config box",
+              "sourceId": "79a90077-ac9a-41b6-a29f-4f67fab17b49",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “0.0.P0_Home”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df81f572096d1f8263ce6d",
+        "name": "1.0.0.0.0.P0.0.0.0_PatientTypes",
+        "config": {
+          "slideId": "1.0.P0_PatientTypes",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28af883a6f20ff434f6f",
+              "name": "l_imgBg",
+              "sourceId": "a802cf01-f8a1-43db-aede-a907a8d3f31f",
+              "rect": {
+                "width": 1024,
+                "height": 768,
+                "x": 0,
+                "y": 0
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_imgBg",
+                    "filename": "l_imgBg-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1024,
+                      "height": 768
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434f77",
+              "name": "l_mainMenu_base",
+              "sourceId": "93afff69-f342-421f-ab47-b2ee0740f6cf",
+              "rect": {
+                "width": 1024,
+                "height": 64,
+                "x": 0,
+                "y": 704
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_mainMenu_base",
+                    "filename": "l_mainMenu_base-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1024,
+                      "height": 64
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434fb1",
+              "name": "l_text01-r1",
+              "sourceId": "e42f81ab-3321-4743-8b3b-a0b6015e32b3",
+              "rect": {
+                "width": 726,
+                "height": 41,
+                "x": 50,
+                "y": 45
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text01-r1",
+                    "filename": "l_text01-r1-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 726,
+                      "height": 41
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434fb3",
+              "name": "l_text02-r2",
+              "sourceId": "8af2214e-7c46-4a32-b432-5e0fb68a9b32",
+              "rect": {
+                "width": 726,
+                "height": 77,
+                "x": 49,
+                "y": 77
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text02-r2",
+                    "filename": "l_text02-r2-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 726,
+                      "height": 77
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434fb5",
+              "name": "l_btnOCS-r3",
+              "sourceId": "7135a070-d513-48cd-bfe1-c1e86897216a",
+              "rect": {
+                "width": 215,
+                "height": 56,
+                "x": 64,
+                "y": 538
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnOCS-r3",
+                    "filename": "l_btnOCS-r3-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 216,
+                      "height": 56
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434fb8",
+              "name": "l_btnType2-r4",
+              "sourceId": "16c432c1-b4e9-49e2-8e6b-28868b37587f",
+              "rect": {
+                "width": 246,
+                "height": 131,
+                "x": 382,
+                "y": 538
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnType2-r4",
+                    "filename": "l_btnType2-r4-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 246,
+                      "height": 131
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434fbd",
+              "name": "l_btnChildren-r5",
+              "sourceId": "832cc8d8-4c33-4c2a-93e1-a0b56a873e7e",
+              "rect": {
+                "width": 277.64892578125,
+                "height": 131,
+                "x": 714,
+                "y": 538
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnChildren-r5",
+                    "filename": "l_btnChildren-r5-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 278,
+                      "height": 131
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434fc2",
+              "name": "l_textLegal-fd3",
+              "sourceId": "058ca3d0-b387-470f-820d-a94300622c33",
+              "rect": {
+                "width": 358,
+                "height": 13,
+                "x": 48,
+                "y": 680
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_textLegal-fd3",
+                    "filename": "l_textLegal-fd3-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 358,
+                      "height": 13
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434fc4",
+              "name": "c_l_mainMenu_btnHome",
+              "sourceId": "a2f276e9-9f19-4a9e-891a-0aa35422c19e",
+              "rect": {
+                "width": 48,
+                "height": 48,
+                "x": 48,
+                "y": 716
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "c_l_mainMenu_btnHome",
+                    "filename": "c_l_mainMenu_btnHome-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 48,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434fc7",
+              "name": "l_mainMenu_btn01_active",
+              "sourceId": "2471d1d2-6446-4adf-b7eb-dcb17dc7b05d",
+              "rect": {
+                "width": 136,
+                "height": 64,
+                "x": 200,
+                "y": 704
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_mainMenu_btn01_active",
+                    "filename": "l_mainMenu_btn01_active-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 136,
+                      "height": 64
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434fca",
+              "name": "c_l_mainMenu_btn02",
+              "sourceId": "f83c9b93-4230-4167-a841-f8601d6825ff",
+              "rect": {
+                "width": 120,
+                "height": 64,
+                "x": 336,
+                "y": 704
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "c_l_mainMenu_btn02",
+                    "filename": "c_l_mainMenu_btn02-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 120,
+                      "height": 64
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434fce",
+              "name": "c_l_mainMenu_btn03",
+              "sourceId": "18e43bbb-659e-4cd6-9994-e009ba066e4e",
+              "rect": {
+                "width": 120,
+                "height": 64,
+                "x": 456,
+                "y": 704
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "c_l_mainMenu_btn03",
+                    "filename": "c_l_mainMenu_btn03-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 120,
+                      "height": 64
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434fd2",
+              "name": "c_l_mainMenu_btn04",
+              "sourceId": "b4ffb735-253e-4681-b217-f1b6650e0da0",
+              "rect": {
+                "width": 120,
+                "height": 64,
+                "x": 576,
+                "y": 704
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "c_l_mainMenu_btn04",
+                    "filename": "c_l_mainMenu_btn04-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 120,
+                      "height": 64
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434fd5",
+              "name": "c_l_mainMenu_btn05",
+              "sourceId": "bf58c5cf-49c3-43dd-af96-315c67f20aeb",
+              "rect": {
+                "width": 120,
+                "height": 64,
+                "x": 696,
+                "y": 704
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "c_l_mainMenu_btn05",
+                    "filename": "c_l_mainMenu_btn05-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 120,
+                      "height": 64
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434fd8",
+              "name": "dontExport",
+              "sourceId": "903fec6a-3402-4c07-be1e-7f4c0815c90c",
+              "rect": {
+                "width": 1016,
+                "height": 86,
+                "x": 8,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28af883a6f20ff434ff2",
+              "name": "",
+              "sourceId": "66e9ddf9-4c43-4a55-87cb-587beaefdb88",
+              "rect": {
+                "width": 15,
+                "height": 24,
+                "x": 8,
+                "y": 372
+              },
+              "assets": {
+                "data": []
+              },
+              "content": ""
+            },
+            {
+              "id": "651c28af883a6f20ff434ff3",
+              "name": "",
+              "sourceId": "7b357635-a8c2-43eb-ae38-cab6ce92067b",
+              "rect": {
+                "width": 15,
+                "height": 24,
+                "x": 1001,
+                "y": 372
+              },
+              "assets": {
+                "data": []
+              },
+              "content": ""
+            },
+            {
+              "id": "651c28af883a6f20ff434ff4",
+              "name": "Config box",
+              "sourceId": "23aea93c-c407-4344-ab5d-5a5f6d8c01b4",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.0.P0_PatientTypes”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df81fe6332100ee4cba76d",
+        "name": "1.1.0.0.0.P0.0.0.0_PatientTypes_OCSDependentPatient",
+        "config": {
+          "slideId": "1.1.P0_PatientTypes_OCSDependent",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28c751c66420bf61804e",
+              "name": "l_imgBg",
+              "sourceId": "1a829095-911e-459f-8997-c3515743d39d",
+              "rect": {
+                "width": 1024,
+                "height": 768,
+                "x": 0,
+                "y": 0
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_imgBg",
+                    "filename": "l_imgBg-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1024,
+                      "height": 768
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c751c66420bf618056",
+              "name": "l_modalObject_legal_open",
+              "sourceId": "fcfb4516-80cb-4bfe-8a19-8e54bf39069a",
+              "rect": {
+                "width": 490,
+                "height": 40,
+                "x": 56,
+                "y": 656
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal_open",
+                    "filename": "l_modalObject_legal_open-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 490,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c751c66420bf61805b",
+              "name": "l_text02-r4",
+              "sourceId": "e43b364f-5fd4-4529-818c-43ad8963a3e6",
+              "rect": {
+                "width": 512,
+                "height": 184,
+                "x": 56,
+                "y": 448
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28c751c66420bf618064",
+              "name": "l_btnVenture",
+              "sourceId": "b9451bc6-ebb8-49fa-8a78-d09d3ec9951b",
+              "rect": {
+                "width": 192,
+                "height": 40,
+                "x": 88,
+                "y": 568
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnVenture",
+                    "filename": "l_btnVenture-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 192,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c751c66420bf618068",
+              "name": "l_btnTraverse",
+              "sourceId": "8266d36a-1d95-4adc-a296-16f9be9a70ce",
+              "rect": {
+                "width": 248,
+                "height": 40,
+                "x": 288,
+                "y": 568
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnTraverse",
+                    "filename": "l_btnTraverse-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 248,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c751c66420bf61806c",
+              "name": "l_btnBurden-r3",
+              "sourceId": "2ac60151-8359-415c-ba9c-93e81382e245",
+              "rect": {
+                "width": 529,
+                "height": 72,
+                "x": 56,
+                "y": 350
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnBurden-r3",
+                    "filename": "l_btnBurden-r3-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 529,
+                      "height": 73
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c751c66420bf618072",
+              "name": "l_text01-r2",
+              "sourceId": "6b0b3fd4-af2b-4fba-9020-c53826b7cefb",
+              "rect": {
+                "width": 571,
+                "height": 174,
+                "x": 21,
+                "y": 147
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text01-r2",
+                    "filename": "l_text01-r2-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 571,
+                      "height": 174
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c751c66420bf618075",
+              "name": "l_btnChildren-r1",
+              "sourceId": "bcc8c2a0-1790-417a-a295-1aa03c82b670",
+              "rect": {
+                "width": 288,
+                "height": 80,
+                "x": 688,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnChildren-r1",
+                    "filename": "l_btnChildren-r1-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 306,
+                      "height": 98
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c751c66420bf618085",
+              "name": "l_btnType2-r1",
+              "sourceId": "02fc3fe7-a91f-46c1-a22f-d817d031d94e",
+              "rect": {
+                "width": 288,
+                "height": 80,
+                "x": 372,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnType2-r1",
+                    "filename": "l_btnType2-r1-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 306,
+                      "height": 98
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c751c66420bf618095",
+              "name": "l_btnOCS-r1",
+              "sourceId": "790c3633-ea41-4e8b-a927-034d20945abe",
+              "rect": {
+                "width": 288,
+                "height": 80,
+                "x": 56,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnOCS-r1",
+                    "filename": "l_btnOCS-r1-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 306,
+                      "height": 98
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c751c66420bf6180a4",
+              "name": "dontExport",
+              "sourceId": "28e838f3-3fec-4768-a425-e1edd6cdb334",
+              "rect": {
+                "width": 1024,
+                "height": 768,
+                "x": 0,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28c751c66420bf618102",
+              "name": "Config box",
+              "sourceId": "ce962598-3aa6-4235-be03-b2acf195a2d1",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P0_PatientTypes_OCSDependent”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df81fee3f9570e8dd92bc8",
+        "name": "1.1.1.0.0.P0.0.0.0_PatientTypes_OCSDependentPatient_Notes",
+        "config": {
+          "slideId": "1.1.P0_PatientTypes_OCSDependent",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28c42d275c212e2786c0",
+              "name": "l_modalObject_legal",
+              "sourceId": "a3ce34a9-4bb1-4b30-b276-925b7a0ad504",
+              "rect": {
+                "width": 1024,
+                "height": 216,
+                "x": 0,
+                "y": 552
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal",
+                    "filename": "l_modalObject_legal-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1042,
+                      "height": 234
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c42d275c212e2786c3",
+              "name": "l_modalObject_legal_close",
+              "sourceId": "35f8e39f-da7f-4ee5-b5b7-5b193e6e84d6",
+              "rect": {
+                "width": 40,
+                "height": 40,
+                "x": 976,
+                "y": 560
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal_close",
+                    "filename": "l_modalObject_legal_close-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 40,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c42d275c212e2786c6",
+              "name": "Config box",
+              "sourceId": "2cf8782b-8cad-4f75-9e92-4b1c8fdecc80",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P0_PatientTypes_OCSDependent”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df820ccafc900f95be41cc",
+        "name": "1.1.0.0.0.P1.1.0.0_PatientTypes_OCSDependentPatient_OCSBurden",
+        "config": {
+          "slideId": "1.1.P1_PatientTypes_OCSDependent_OCSBurden",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28c9dfae28202ecc340a",
+              "name": "l_btn01",
+              "sourceId": "fc2225d8-91de-43d4-85d3-e01cd9eeb79c",
+              "rect": {
+                "width": 224,
+                "height": 48,
+                "x": 48,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn01",
+                    "filename": "l_btn01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 224,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c9dfae28202ecc340d",
+              "name": "l_btn02",
+              "sourceId": "9da9c7eb-dded-41ff-a59e-f3f77f1bb37c",
+              "rect": {
+                "width": 224,
+                "height": 40,
+                "x": 280,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn02",
+                    "filename": "l_btn02-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 224,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c9dfae28202ecc3410",
+              "name": "l_btn03",
+              "sourceId": "1b0498a1-939a-4eaa-a422-df41410ccfe0",
+              "rect": {
+                "width": 272,
+                "height": 40,
+                "x": 512,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn03",
+                    "filename": "l_btn03-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 272,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c9dfae28202ecc3413",
+              "name": "l_btn04",
+              "sourceId": "1872ac37-0884-4bc9-bf30-7b90525bf376",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 792,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn04",
+                    "filename": "l_btn04-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c9dfae28202ecc3416",
+              "name": "l_imgBgPopup",
+              "sourceId": "637c9be0-f0eb-4d52-beab-bd1afe0c64d3",
+              "rect": {
+                "width": 1008,
+                "height": 672,
+                "x": 8,
+                "y": 88
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_imgBgPopup",
+                    "filename": "l_imgBgPopup-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 672
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c9dfae28202ecc341d",
+              "name": "l_text03-r3",
+              "sourceId": "f9d642a1-5a28-47ba-a1ee-ed139f9a8cf1",
+              "rect": {
+                "width": 440,
+                "height": 71.9921875,
+                "x": 48,
+                "y": 625
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text03-r3",
+                    "filename": "l_text03-r3-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 458,
+                      "height": 90
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c9dfae28202ecc342e",
+              "name": "l_text02-r2",
+              "sourceId": "698c5827-484f-4844-8020-dffb1765a5c6",
+              "rect": {
+                "width": 752,
+                "height": 328,
+                "x": 48,
+                "y": 266
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text02-r2",
+                    "filename": "l_text02-r2-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 770,
+                      "height": 339
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c9dfae28202ecc344c",
+              "name": "l_text01-r1",
+              "sourceId": "94a87066-15b3-4035-9af9-e1ab4b4e8d9a",
+              "rect": {
+                "width": 752,
+                "height": 143,
+                "x": 48,
+                "y": 104
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text01-r1",
+                    "filename": "l_text01-r1-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 752,
+                      "height": 143
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c9dfae28202ecc344f",
+              "name": "l_img01",
+              "sourceId": "93e092df-f77a-41ec-b4f1-80630176916c",
+              "rect": {
+                "width": 471,
+                "height": 488,
+                "x": 545.000244140625,
+                "y": 272
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_img01",
+                    "filename": "l_img01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 471,
+                      "height": 488
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28c9dfae28202ecc3452",
+              "name": "dontExport",
+              "sourceId": "352ee1b9-8814-418e-bb8d-9a8cd3434b02",
+              "rect": {
+                "width": 560,
+                "height": 48,
+                "x": 464,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28c9dfae28202ecc346d",
+              "name": "Config box",
+              "sourceId": "a11d1a77-0b4a-49bb-951a-5a867bcc0f87",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P1_PatientTypes_OCSDependent_OCSBurden”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df8215516618200ec8683f",
+        "name": "1.1.0.0.0.P1.2.0.0_PatientTypes_OCSDependentPatient_Venture",
+        "config": {
+          "slideId": "1.1.P2_PatientTypes_OCSDependent_Venture",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28ca71e3a920890e1721",
+              "name": "l_btn01",
+              "sourceId": "02d141b9-8bd7-48ab-ac8d-dd37e3a1188c",
+              "rect": {
+                "width": 224,
+                "height": 40,
+                "x": 48,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn01",
+                    "filename": "l_btn01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 224,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ca71e3a920890e1724",
+              "name": "l_btn02",
+              "sourceId": "4bd32c1e-e592-45a9-942e-cfcab6f309b4",
+              "rect": {
+                "width": 224,
+                "height": 48,
+                "x": 280,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn02",
+                    "filename": "l_btn02-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 224,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ca71e3a920890e1727",
+              "name": "l_btn03",
+              "sourceId": "f6d49bae-e23e-4205-9203-078c4c8be1a4",
+              "rect": {
+                "width": 272,
+                "height": 40,
+                "x": 512,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn03",
+                    "filename": "l_btn03-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 272,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ca71e3a920890e172a",
+              "name": "l_btn04",
+              "sourceId": "01f3fb29-7af2-4215-9ce7-1f52143b7449",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 792,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn04",
+                    "filename": "l_btn04-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ca71e3a920890e172d",
+              "name": "l_imgBgPopup",
+              "sourceId": "5528c094-26a9-44be-a884-92772baee1cb",
+              "rect": {
+                "width": 1008,
+                "height": 672,
+                "x": 8,
+                "y": 88
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_imgBgPopup",
+                    "filename": "l_imgBgPopup-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 672
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ca71e3a920890e1734",
+              "name": "l_text02-r2",
+              "sourceId": "091123d4-8bb6-4313-876e-edcfc30f7a1b",
+              "rect": {
+                "width": 928,
+                "height": 344,
+                "x": 48,
+                "y": 266
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text02-r2",
+                    "filename": "l_text02-r2-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 946,
+                      "height": 355
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ca71e3a920890e1757",
+              "name": "l_img01",
+              "sourceId": "e7cf1dc1-3401-41c2-a0fc-380fdd8cc47a",
+              "rect": {
+                "width": 363,
+                "height": 440,
+                "x": 653,
+                "y": 320
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_img01",
+                    "filename": "l_img01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 363,
+                      "height": 440
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ca71e3a920890e175b",
+              "name": "l_text01-r1",
+              "sourceId": "6428d2e1-b930-4c5d-9063-49ad0dfdee89",
+              "rect": {
+                "width": 768,
+                "height": 143,
+                "x": 48,
+                "y": 104
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text01-r1",
+                    "filename": "l_text01-r1-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 768,
+                      "height": 143
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ca71e3a920890e175e",
+              "name": "l_modalObject_legal_open",
+              "sourceId": "fd43f55a-bf10-4c7d-8370-fcf2f31ecd3c",
+              "rect": {
+                "width": 1008,
+                "height": 48,
+                "x": 8,
+                "y": 712
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal_open",
+                    "filename": "l_modalObject_legal_open-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ca71e3a920890e1764",
+              "name": "dontExport",
+              "sourceId": "5fa1d97f-ce3a-4e8b-8c15-ab6e6a6d5dda",
+              "rect": {
+                "width": 560,
+                "height": 48,
+                "x": 464,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28ca71e3a920890e177f",
+              "name": "Config box",
+              "sourceId": "5b07c9a6-fb60-4cb7-911f-46fb23eb2892",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P2_PatientTypes_OCSDependent_Venture”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df8224c31a4e0e81551a5e",
+        "name": "1.1.0.0.0.P1.3.0.0_PatientTypes_OCSDependentPatient_TraverseOle",
+        "config": {
+          "slideId": "1.1.P3_PatientTypes_OCSDependent_TraverseOle",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28cc33eb2c20a6ae5cc6",
+              "name": "l_btn01",
+              "sourceId": "80e04250-0016-4a70-b652-86d959f405a4",
+              "rect": {
+                "width": 224,
+                "height": 40,
+                "x": 48,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn01",
+                    "filename": "l_btn01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 224,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cc33eb2c20a6ae5cc9",
+              "name": "l_btn02",
+              "sourceId": "2e5fe51f-1fbf-42c7-a3cb-30c2185e61ca",
+              "rect": {
+                "width": 224,
+                "height": 40,
+                "x": 280,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn02",
+                    "filename": "l_btn02-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 224,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cc33eb2c20a6ae5ccc",
+              "name": "l_btn03",
+              "sourceId": "879809e0-48d8-4a66-8567-0ae7c1627f27",
+              "rect": {
+                "width": 272,
+                "height": 43,
+                "x": 512,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn03",
+                    "filename": "l_btn03-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 272,
+                      "height": 43
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cc33eb2c20a6ae5ccf",
+              "name": "l_btn04",
+              "sourceId": "e19b6af3-1a12-496d-9f1d-71637ef7c947",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 792,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn04",
+                    "filename": "l_btn04-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cc33eb2c20a6ae5cd2",
+              "name": "l_imgBgPopup",
+              "sourceId": "260afec6-a77d-44bd-98ac-ce08913b49a6",
+              "rect": {
+                "width": 1008,
+                "height": 672,
+                "x": 8,
+                "y": 88
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_imgBgPopup",
+                    "filename": "l_imgBgPopup-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 672
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cc33eb2c20a6ae5cd8",
+              "name": "l_text01-r1",
+              "sourceId": "a057b5a7-61bb-4b35-8d7a-8740d36dd4ed",
+              "rect": {
+                "width": 896,
+                "height": 166,
+                "x": 48,
+                "y": 112
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text01-r1",
+                    "filename": "l_text01-r1-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 896,
+                      "height": 166
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cc33eb2c20a6ae5cdc",
+              "name": "l_text02-r2",
+              "sourceId": "53b2ece0-55d8-400c-957b-163e5fe1a488",
+              "rect": {
+                "width": 928,
+                "height": 280,
+                "x": 48,
+                "y": 297
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text02-r2",
+                    "filename": "l_text02-r2-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 946,
+                      "height": 291
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cc33eb2c20a6ae5cfd",
+              "name": "l_img01",
+              "sourceId": "d996d16e-cf1e-455a-bf42-6d2328580a75",
+              "rect": {
+                "width": 296,
+                "height": 376,
+                "x": 720,
+                "y": 384
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_img01",
+                    "filename": "l_img01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 296,
+                      "height": 376
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cc33eb2c20a6ae5d01",
+              "name": "l_modalObject_legal_open",
+              "sourceId": "10cf6fc6-56cf-4ce6-88fe-7b33950907a8",
+              "rect": {
+                "width": 1008,
+                "height": 64,
+                "x": 8,
+                "y": 696
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal_open",
+                    "filename": "l_modalObject_legal_open-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 64
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cc33eb2c20a6ae5d07",
+              "name": "dontExport",
+              "sourceId": "b55b29f2-bb3d-475f-aebd-f1b1d425c44d",
+              "rect": {
+                "width": 560,
+                "height": 48,
+                "x": 464,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28cc33eb2c20a6ae5d23",
+              "name": "Config box",
+              "sourceId": "3964f100-184c-4fbd-a3e8-ef1bc658d889",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P3_PatientTypes_OCSDependent_TraverseOle”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df822c0c856f0edcd065fc",
+        "name": "1.1.0.0.0.P1.4.0.0_PatientTypes_OCSDependentPatient_TraverseOle_StudyDesign",
+        "config": {
+          "slideId": "1.1.P4_PatientTypes_OCSDependent_Study",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28cd2cb54820cba328f1",
+              "name": "l_imgBgPopup",
+              "sourceId": "3e4a6591-d0ce-4ad8-9a03-80387f5998e9",
+              "rect": {
+                "width": 1008,
+                "height": 672,
+                "x": 8,
+                "y": 88
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_imgBgPopup",
+                    "filename": "l_imgBgPopup-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 672
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cd2cb54820cba328f7",
+              "name": "l_btn01",
+              "sourceId": "578f7ee3-2187-4cbb-9a5b-b27ef68a3729",
+              "rect": {
+                "width": 224,
+                "height": 40,
+                "x": 48,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn01",
+                    "filename": "l_btn01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 224,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cd2cb54820cba328fa",
+              "name": "l_btn02",
+              "sourceId": "dc7f4feb-f303-4938-9d09-6ec9f19f0146",
+              "rect": {
+                "width": 224,
+                "height": 40,
+                "x": 280,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn02",
+                    "filename": "l_btn02-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 224,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cd2cb54820cba328fd",
+              "name": "l_btn03",
+              "sourceId": "13e969a0-a178-4e9d-98d4-a19069ab5cbc",
+              "rect": {
+                "width": 272,
+                "height": 40,
+                "x": 512,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn03",
+                    "filename": "l_btn03-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 272,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cd2cb54820cba32900",
+              "name": "l_btn04",
+              "sourceId": "a69f0f60-39c7-4b43-b841-d31c18e86cc9",
+              "rect": {
+                "width": 184,
+                "height": 46,
+                "x": 792,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btn04",
+                    "filename": "l_btn04-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 46
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cd2cb54820cba32903",
+              "name": "l_tab01_cover_btn01-r3",
+              "sourceId": "c96fdc64-dd07-46ae-875c-5f4fb5fc0cfc",
+              "rect": {
+                "width": 216,
+                "height": 40,
+                "x": 776,
+                "y": 304
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_cover_btn01-r3",
+                    "filename": "l_tab01_cover_btn01-r3-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 234,
+                      "height": 58
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cd2cb54820cba32909",
+              "name": "l_tab02_cover_btn02-r4",
+              "sourceId": "66ae9780-9142-4bbb-a379-b9e63bb02800",
+              "rect": {
+                "width": 216,
+                "height": 40,
+                "x": 776,
+                "y": 352
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab02_cover_btn02-r4",
+                    "filename": "l_tab02_cover_btn02-r4-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 234,
+                      "height": 58
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cd2cb54820cba3290f",
+              "name": "l_img01",
+              "sourceId": "b6142289-a4ea-4734-9603-29ab22bdcfdb",
+              "rect": {
+                "width": 402,
+                "height": 365,
+                "x": 614,
+                "y": 395
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_img01",
+                    "filename": "l_img01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 402,
+                      "height": 365
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cd2cb54820cba32913",
+              "name": "l_modalObject_legal_open",
+              "sourceId": "b0a22d6f-39eb-4e98-ba6e-abf94dade321",
+              "rect": {
+                "width": 1008,
+                "height": 48,
+                "x": 8,
+                "y": 712
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal_open",
+                    "filename": "l_modalObject_legal_open-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cd2cb54820cba32919",
+              "name": "l_text01-r1",
+              "sourceId": "a0ff98df-c332-446c-b447-584b565d08b2",
+              "rect": {
+                "width": 848,
+                "height": 171,
+                "x": 48,
+                "y": 104
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text01-r1",
+                    "filename": "l_text01-r1-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 848,
+                      "height": 171
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cd2cb54820cba3291c",
+              "name": "l_text02-r2",
+              "sourceId": "1edbe3a8-8333-4aea-a588-82ba6bde85b0",
+              "rect": {
+                "width": 703.999755859375,
+                "height": 412,
+                "x": 48.000244140625,
+                "y": 292
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text02-r2",
+                    "filename": "l_text02-r2-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 722,
+                      "height": 423
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cd2cb54820cba3295e",
+              "name": "dontExport",
+              "sourceId": "38abf025-a01e-4b8f-82df-ddf6ea00e4d3",
+              "rect": {
+                "width": 560,
+                "height": 48,
+                "x": 464,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28cd2cb54820cba32979",
+              "name": "Config box",
+              "sourceId": "fb2fb997-53cb-447f-9363-3cddd119b7dd",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P4_PatientTypes_OCSDependent_Study”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df822d8d8d57202fb6f4cb",
+        "name": "1.1.0.0.0.P1.1.0.0_PatientTypes_OCSDependentPatient_Refs",
+        "config": {
+          "slideId": "1.1.P0_PatientTypes_OCSDependent",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28db2eb20820b81e5d95",
+              "name": "dontExport",
+              "sourceId": "946eeaee-39a4-4692-8d87-00f030191762",
+              "rect": {
+                "width": 1024,
+                "height": 400,
+                "x": 0,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28db2eb20820b81e5da1",
+              "name": "l_reference",
+              "sourceId": "913f4138-f50f-4065-9e3e-6c0c2ef47d4f",
+              "rect": {
+                "width": 1024,
+                "height": 205,
+                "x": 0,
+                "y": 144
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_reference",
+                    "filename": "l_reference-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1024,
+                      "height": 205
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28db2eb20820b81e5da7",
+              "name": "Config box",
+              "sourceId": "ff806a07-e2ee-4185-84a9-ced62dd84d37",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P0_PatientTypes_OCSDependent”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df822d0c856f0edcd0676b",
+        "name": "1.1.0.0.0.P1.1.1.0_PatientTypes_OCSDependentPatient_OCSBurden_Refs",
+        "config": {
+          "slideId": "1.1.P1_PatientTypes_OCSDependent_OCSBurden",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28dbf47470209f45d1cd",
+              "name": "dontExport",
+              "sourceId": "b52bfb26-b975-4ee0-98c7-1275b3c7d5cf",
+              "rect": {
+                "width": 1024,
+                "height": 496,
+                "x": 0,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28dbf47470209f45d1d9",
+              "name": "l_references",
+              "sourceId": "ca551a76-8ed5-4057-aef7-087b64119b14",
+              "rect": {
+                "width": 1024,
+                "height": 305,
+                "x": 0,
+                "y": 144
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_references",
+                    "filename": "l_references-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1024,
+                      "height": 305
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28dbf47470209f45d1e1",
+              "name": "Config box",
+              "sourceId": "df700f83-b20e-4b20-8d5a-fbbf3db62918",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P1_PatientTypes_OCSDependent_OCSBurden”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df822edbfc1e217f606b54",
+        "name": "1.1.0.0.0.P1.2.1.0_PatientTypes_OCSDependentPatient_Venture_Notes",
+        "config": {
+          "slideId": "1.1.P2_PatientTypes_OCSDependent_Venture",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28dbd1c57920f764b6cf",
+              "name": "l_modalObject_legal",
+              "sourceId": "f4afe1af-419b-4b9a-b870-dc713facc10f",
+              "rect": {
+                "width": 1024,
+                "height": 280,
+                "x": 0,
+                "y": 488
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal",
+                    "filename": "l_modalObject_legal-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1042,
+                      "height": 298
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28dbd1c57920f764b6d2",
+              "name": "l_modalObject_legal_close",
+              "sourceId": "d1c6afe2-4a4d-44e4-acd7-c9d1518b68bf",
+              "rect": {
+                "width": 40,
+                "height": 40,
+                "x": 976,
+                "y": 496
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal_close",
+                    "filename": "l_modalObject_legal_close-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 40,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28dbd1c57920f764b6d5",
+              "name": "Config box",
+              "sourceId": "0867bef7-467d-48da-9966-dc55476d85a7",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P2_PatientTypes_OCSDependent_Venture”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df822ea23341219c6ce0e6",
+        "name": "1.1.0.0.0.P1.2.2.0_PatientTypes_OCSDependentPatient_Venture_Refs",
+        "config": {
+          "slideId": "1.1.P2_PatientTypes_OCSDependent_Venture",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28db69cd5020b8a4cd2b",
+              "name": "dontExport",
+              "sourceId": "ef1c6d3c-2539-4a57-82c8-e313986326b3",
+              "rect": {
+                "width": 1024,
+                "height": 512,
+                "x": 0,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28db69cd5020b8a4cd37",
+              "name": "l_references",
+              "sourceId": "00c3af7b-e9ba-4d5f-84a6-c73753d62a57",
+              "rect": {
+                "width": 1024,
+                "height": 321,
+                "x": 0,
+                "y": 144
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_references",
+                    "filename": "l_references-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1024,
+                      "height": 321
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28db69cd5020b8a4cd3f",
+              "name": "Config box",
+              "sourceId": "3642178c-bd16-4ad8-a83d-d4d146f89176",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P2_PatientTypes_OCSDependent_Venture”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df822f1ccd3d223a01b5f7",
+        "name": "1.1.0.0.0.P1.3.1.0_PatientTypes_OCSDependentPatient_TraverseOle_Notes",
+        "config": {
+          "slideId": "1.1.P3_PatientTypes_OCSDependent_TraverseOle",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28db70353d20e1a28e06",
+              "name": "l_modalObject_legal",
+              "sourceId": "cbf68bba-46b9-4d50-b52d-a21aa8b6b813",
+              "rect": {
+                "width": 1024,
+                "height": 336,
+                "x": 0,
+                "y": 432
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal",
+                    "filename": "l_modalObject_legal-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1042,
+                      "height": 354
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28db70353d20e1a28e09",
+              "name": "l_modalObject_legal_close",
+              "sourceId": "f7939051-1d89-4767-a678-e7668ef38a99",
+              "rect": {
+                "width": 40,
+                "height": 40,
+                "x": 976,
+                "y": 440
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal_close",
+                    "filename": "l_modalObject_legal_close-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 40,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28db70353d20e1a28e0c",
+              "name": "Config box",
+              "sourceId": "44998249-7da0-43b5-9265-188ea8d12e1d",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P3_PatientTypes_OCSDependent_TraverseOle”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df822fde08040f414d54e9",
+        "name": "1.1.0.0.0.P1.3.2.0_PatientTypes_OCSDependentPatient_TraverseOle_Refs",
+        "config": {
+          "slideId": "1.1.P3_PatientTypes_OCSDependent_TraverseOle",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28db71e3a920890e19fb",
+              "name": "dontExport",
+              "sourceId": "7ac7973e-651a-42d6-b9b9-c96b028c0c7b",
+              "rect": {
+                "width": 1024,
+                "height": 376,
+                "x": 0,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28db71e3a920890e1a07",
+              "name": "l_references",
+              "sourceId": "865c946d-79fb-4c34-a3de-73254b3649c2",
+              "rect": {
+                "width": 1024,
+                "height": 189,
+                "x": 0,
+                "y": 144
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_references",
+                    "filename": "l_references-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1024,
+                      "height": 189
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28db71e3a920890e1a0c",
+              "name": "Config box",
+              "sourceId": "68608003-0a67-40b9-87ae-60da68207d71",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P3_PatientTypes_OCSDependent_TraverseOle”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df82309b2ff221de643da8",
+        "name": "1.1.0.0.0.P1.4.1.0_PatientTypes_OCSDependentPatient_TraverseOle_StudyDesign_Notes",
+        "config": {
+          "slideId": "1.1.P4_PatientTypes_OCSDependent_Study",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28dbf2698020b966b126",
+              "name": "l_modalObject_legal",
+              "sourceId": "f92b6078-9a42-4847-9cd0-e58d38e83944",
+              "rect": {
+                "width": 1024,
+                "height": 280,
+                "x": 0,
+                "y": 488
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal",
+                    "filename": "l_modalObject_legal-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1042,
+                      "height": 298
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28dbf2698020b966b129",
+              "name": "l_modalObject_legal_close",
+              "sourceId": "a354e94a-42e3-499f-b5d5-dd5597ce940b",
+              "rect": {
+                "width": 40,
+                "height": 40,
+                "x": 976,
+                "y": 496
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal_close",
+                    "filename": "l_modalObject_legal_close-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 40,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28dbf2698020b966b12c",
+              "name": "Config box",
+              "sourceId": "e106be05-e135-4599-8809-694c0416cb38",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P4_PatientTypes_OCSDependent_Study”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df8231ac8c7d0f306b25c8",
+        "name": "1.1.0.0.0.P1.4.2.0_PatientTypes_OCSDependentPatient_TraverseOle_StudyDesign_PatientCharacteristics",
+        "config": {
+          "slideId": "1.1.P4_PatientTypes_OCSDependent_Study",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28dc67fc4920987cd5c5",
+              "name": "l_tab01_content01",
+              "sourceId": "32b840fe-9c09-4de5-b8f1-387615ee3086",
+              "rect": {
+                "width": 720,
+                "height": 656,
+                "x": 48,
+                "y": 96
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_content01",
+                    "filename": "l_tab01_content01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 738,
+                      "height": 667
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28dc67fc4920987cd620",
+              "name": "l_tab01_btn02",
+              "sourceId": "d78ae261-7848-4685-80d8-c71944d0d7d7",
+              "rect": {
+                "width": 216,
+                "height": 40,
+                "x": 776,
+                "y": 352
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_btn02",
+                    "filename": "l_tab01_btn02-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 216,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28dc67fc4920987cd626",
+              "name": "l_tab01_btn01_active",
+              "sourceId": "e4f56bdb-30c9-424e-8c37-567dab230f59",
+              "rect": {
+                "width": 232,
+                "height": 40,
+                "x": 760,
+                "y": 304
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_btn01_active",
+                    "filename": "l_tab01_btn01_active-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 250,
+                      "height": 58
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28dc67fc4920987cd62c",
+              "name": "Config box",
+              "sourceId": "792ad0e9-27ab-4750-a97c-55f191df84e1",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P4_PatientTypes_OCSDependent_Study”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df82333546e921a7cd917d",
+        "name": "1.1.0.0.0.P1.4.3.0_PatientTypes_OCSDependentPatient_TraverseOle_StudyDesign_TraverseOleStudy",
+        "config": {
+          "slideId": "1.1.P4_PatientTypes_OCSDependent_Study",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28dc51c66420bf6182db",
+              "name": "l_tab01_content02",
+              "sourceId": "1fd12734-d347-4558-9db1-f580f0178dbf",
+              "rect": {
+                "width": 720,
+                "height": 656,
+                "x": 48,
+                "y": 96
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_content02",
+                    "filename": "l_tab01_content02-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 738,
+                      "height": 667
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28dc51c66420bf6182ff",
+              "name": "l_tab01_btn02_active",
+              "sourceId": "f9ef4e59-7012-45cd-8240-7c7be48613f4",
+              "rect": {
+                "width": 232,
+                "height": 40,
+                "x": 760,
+                "y": 352
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_btn02_active",
+                    "filename": "l_tab01_btn02_active-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 250,
+                      "height": 58
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28dc51c66420bf618305",
+              "name": "l_tab01_btn01",
+              "sourceId": "89f98eac-3034-48aa-82b4-5bacb7227d72",
+              "rect": {
+                "width": 216,
+                "height": 40,
+                "x": 776,
+                "y": 304
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_btn01",
+                    "filename": "l_tab01_btn01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 216,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28dc51c66420bf61830b",
+              "name": "Config box",
+              "sourceId": "74f23139-5a07-4d20-9fbf-05481b426aff",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P4_PatientTypes_OCSDependent_Study”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df823303dff00f55d9daaf",
+        "name": "1.1.0.0.0.P1.4.4.0_PatientTypes_OCSDependentPatient_TraverseOle_StudyDesign_Refs",
+        "config": {
+          "slideId": "1.1.P4_PatientTypes_OCSDependent_Study",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28dc2cb54820cba32aa8",
+              "name": "dontExport",
+              "sourceId": "81a8c462-0ede-48ce-9441-df9143ea18d7",
+              "rect": {
+                "width": 1024,
+                "height": 720,
+                "x": 0,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28dc2cb54820cba32ab4",
+              "name": "l_references",
+              "sourceId": "79042049-5a91-4035-9b69-a93bf9668816",
+              "rect": {
+                "width": 1024,
+                "height": 525,
+                "x": 0,
+                "y": 144
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_references",
+                    "filename": "l_references-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1024,
+                      "height": 525
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28dc2cb54820cba32abf",
+              "name": "Config box",
+              "sourceId": "87de1eda-6918-423b-a505-69bbc97886e4",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.1.P4_PatientTypes_OCSDependent_Study”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df9c6840dbe00e7a7917aa",
+        "name": "1.2.0.0.0.P0.0.0.0_PatientTypes_Type2Asthma",
+        "config": {
+          "slideId": "1.2.P0_PatientTypes_Type2Asthma",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28e858ce272067a20b89",
+              "name": "l_imgBg",
+              "sourceId": "aff188ad-22b0-48e7-bf85-ae68374bc7e9",
+              "rect": {
+                "width": 1024,
+                "height": 768,
+                "x": 0,
+                "y": 0
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_imgBg",
+                    "filename": "l_imgBg-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1024,
+                      "height": 768
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28e858ce272067a20b95",
+              "name": "l_modalObject_legal_open",
+              "sourceId": "c4509c68-57ee-4e63-8e9d-2f4cb4e16be6",
+              "rect": {
+                "width": 496,
+                "height": 74,
+                "x": 56,
+                "y": 624
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal_open",
+                    "filename": "l_modalObject_legal_open-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 496,
+                      "height": 74
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28e858ce272067a20b9a",
+              "name": "l_text02-r4",
+              "sourceId": "8740c1e7-a129-417c-9278-4c949112ec21",
+              "rect": {
+                "width": 512,
+                "height": 208,
+                "x": 56.22705078125,
+                "y": 392
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text02-r4",
+                    "filename": "l_text02-r4-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 530,
+                      "height": 226
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28e858ce272067a20ba8",
+              "name": "l_btnFunction",
+              "sourceId": "77694ce2-0739-4f6f-a0ad-1f1b19b3c760",
+              "rect": {
+                "width": 232,
+                "height": 56.5,
+                "x": 304,
+                "y": 424
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnFunction",
+                    "filename": "l_btnFunction-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 232,
+                      "height": 57
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28e858ce272067a20bac",
+              "name": "l_btnExacerbations",
+              "sourceId": "3ac42e41-badb-4a0a-9b14-dfd4a22a898a",
+              "rect": {
+                "width": 272,
+                "height": 56.5,
+                "x": 264,
+                "y": 520
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnExacerbations",
+                    "filename": "l_btnExacerbations-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 272,
+                      "height": 57
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28e858ce272067a20bb0",
+              "name": "l_btnAsthma-r3",
+              "sourceId": "2f3b02ad-4cc6-4dfd-a7ae-77e23fbd1be0",
+              "rect": {
+                "width": 515,
+                "height": 96,
+                "x": 66,
+                "y": 288
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnAsthma-r3",
+                    "filename": "l_btnAsthma-r3-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 515,
+                      "height": 97
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28e858ce272067a20bb7",
+              "name": "l_text01-r2",
+              "sourceId": "8929f1ad-c090-42de-b4f5-09f580e69f37",
+              "rect": {
+                "width": 579,
+                "height": 131,
+                "x": 21,
+                "y": 147
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text01-r2",
+                    "filename": "l_text01-r2-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 579,
+                      "height": 131
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28e858ce272067a20bba",
+              "name": "l_btnChildren-r1",
+              "sourceId": "ad2c336a-9bcc-45ad-b45d-2ad80e4f53d9",
+              "rect": {
+                "width": 288,
+                "height": 80,
+                "x": 688,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnChildren-r1",
+                    "filename": "l_btnChildren-r1-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 306,
+                      "height": 98
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28e858ce272067a20bca",
+              "name": "l_btnOCS-r1",
+              "sourceId": "f992d84b-7bf8-4ebe-9aad-80835ea4d081",
+              "rect": {
+                "width": 288,
+                "height": 80,
+                "x": 56,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnOCS-r1",
+                    "filename": "l_btnOCS-r1-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 306,
+                      "height": 98
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28e858ce272067a20bd9",
+              "name": "l_btnType2-r1",
+              "sourceId": "e22d2f0d-c4cc-4cd1-bf3b-0e0719209519",
+              "rect": {
+                "width": 288,
+                "height": 80,
+                "x": 372,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnType2-r1",
+                    "filename": "l_btnType2-r1-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 306,
+                      "height": 98
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28e858ce272067a20be9",
+              "name": "dontExport",
+              "sourceId": "f490f40f-96f0-485e-b461-816e4535a1ca",
+              "rect": {
+                "width": 1024,
+                "height": 768,
+                "x": 0,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28e858ce272067a20c47",
+              "name": "Config box",
+              "sourceId": "84011e9a-8af0-4456-b06f-3ea31ec7cf0b",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.2.P0_PatientTypes_Type2Asthma”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df9c699f807021f60a9ce1",
+        "name": "1.2.1.0.0.P0.0.0.0_PatientTypes_Type2Asthma_Notes",
+        "config": {
+          "slideId": "1.2.P0_PatientTypes_Type2Asthma",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28cccb92fa217190cc60",
+              "name": "l_modalObject_legal",
+              "sourceId": "de04bdcc-3a85-4a95-af87-53c48b14bea6",
+              "rect": {
+                "width": 1024,
+                "height": 320,
+                "x": 0,
+                "y": 448
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal",
+                    "filename": "l_modalObject_legal-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1042,
+                      "height": 338
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cccb92fa217190cc63",
+              "name": "l_modalObject_legal_close",
+              "sourceId": "9f7f3d85-372b-4e1c-b31d-2672a40ab45b",
+              "rect": {
+                "width": 40,
+                "height": 40,
+                "x": 976,
+                "y": 456
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal_close",
+                    "filename": "l_modalObject_legal_close-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 40,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28cccb92fa217190cc66",
+              "name": "Config box",
+              "sourceId": "b53f590b-7641-4967-a544-52a4589b0966",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.2.P0_PatientTypes_Type2Asthma”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df9c74064b411f12ff53d3",
+        "name": "1.2.0.0.0.P2.1.0.0_PatientTypes_Type2Asthma_ElevatedBiomarkers ",
+        "config": null,
+        "layers": {
+          "data": [
+            {
+              "id": "651c28ce365de9205c581872",
+              "name": "l_btnType2",
+              "sourceId": "5c397d4c-40c3-4989-97fc-74880bdce0f8",
+              "rect": {
+                "width": 184,
+                "height": 48,
+                "x": 48,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnType2",
+                    "filename": "l_btnType2-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ce365de9205c581875",
+              "name": "l_btnLung",
+              "sourceId": "6d500d36-7f9e-45f4-a068-c77975769e49",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 240,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnLung",
+                    "filename": "l_btnLung-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ce365de9205c581878",
+              "name": "l_btnExacerbations",
+              "sourceId": "5304cdcb-d972-4d0a-bb13-3200056dbfab",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 432,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnExacerbations",
+                    "filename": "l_btnExacerbations-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ce365de9205c58187b",
+              "name": "l_btnACQ",
+              "sourceId": "d32d89f9-43de-42d3-93f4-f9659b72179e",
+              "rect": {
+                "width": 160,
+                "height": 40,
+                "x": 624,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnACQ",
+                    "filename": "l_btnACQ-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 160,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ce365de9205c58187e",
+              "name": "l_btnStudy",
+              "sourceId": "3f43a80e-0844-44a8-8a5a-29507ae87df9",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 792,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnStudy",
+                    "filename": "l_btnStudy-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ce365de9205c581881",
+              "name": "l_imgBgPopup",
+              "sourceId": "1cc9e52b-ab04-494d-8cff-c06a528b6823",
+              "rect": {
+                "width": 1008,
+                "height": 672,
+                "x": 8,
+                "y": 88
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_imgBgPopup",
+                    "filename": "l_imgBgPopup-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": null,
+                      "height": null
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ce365de9205c58188b",
+              "name": "l_text01-r1",
+              "sourceId": "7981e429-257b-44cf-bb9d-b01d0ebb6f06",
+              "rect": {
+                "width": 728,
+                "height": 109,
+                "x": 48,
+                "y": 104
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text01-r1",
+                    "filename": "l_text01-r1-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 728,
+                      "height": 109
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ce365de9205c58188d",
+              "name": "l_text02-r2",
+              "sourceId": "32799ab9-47c1-4bc9-92a1-328110ad0fe7",
+              "rect": {
+                "width": 625,
+                "height": 58,
+                "x": 48,
+                "y": 218
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text02-r2",
+                    "filename": "l_text02-r2-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 625,
+                      "height": 58
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ce365de9205c58188f",
+              "name": "l_text03-r3",
+              "sourceId": "929c8ca3-ca00-4749-963f-46b57a2abde5",
+              "rect": {
+                "width": 672,
+                "height": 376,
+                "x": 48,
+                "y": 296
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text03-r3",
+                    "filename": "l_text03-r3-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 690,
+                      "height": 394
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ce365de9205c5818f3",
+              "name": "l_modalObject_legal_open",
+              "sourceId": "a7e3ad1a-cd21-4764-b94c-3ab9a0e2359b",
+              "rect": {
+                "width": 1008,
+                "height": 64,
+                "x": 8,
+                "y": 696
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal_open",
+                    "filename": "l_modalObject_legal_open-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 64
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28ce365de9205c5818f9",
+              "name": "dontExport",
+              "sourceId": "530ac3da-f250-431b-8d45-89dfc193791a",
+              "rect": {
+                "width": 560,
+                "height": 48,
+                "x": 464,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df9c7d828a641fa703651e",
+        "name": "1.2.0.0.0.P2.2.1.0_PatientTypes_LungFunction_Biomarker",
+        "config": {
+          "slideId": "1.2.P2_PatientTypes_Type2Asthma_LungFunction",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28d08963032153d3d6dc",
+              "name": "l_tab01_content01_imgBg",
+              "sourceId": "26c68813-5932-4efd-a65b-ada682aa5544",
+              "rect": {
+                "width": 1008,
+                "height": 672,
+                "x": 8,
+                "y": 88
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_content01_imgBg",
+                    "filename": "l_tab01_content01_imgBg-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 672
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d08963032153d3d6e7",
+              "name": "l_tab01_content01_text03",
+              "sourceId": "7044a1b5-0782-4dbd-8cfc-1312bd3b5c64",
+              "rect": {
+                "width": 552,
+                "height": 72,
+                "x": 48,
+                "y": 608
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_content01_text03",
+                    "filename": "l_tab01_content01_text03-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 570,
+                      "height": 90
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d08963032153d3d6f6",
+              "name": "l_tab01_content01_text02",
+              "sourceId": "d72f8d8e-53ab-48dd-9115-e8c7dc9976c9",
+              "rect": {
+                "width": 656,
+                "height": 248.0009765625,
+                "x": 48,
+                "y": 340.9990234375
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_content01_text02",
+                    "filename": "l_tab01_content01_text02-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 674,
+                      "height": 266
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d08963032153d3d71b",
+              "name": "l_tab01_content01_text01",
+              "sourceId": "fec51f0f-2f68-4dfe-9b24-9fc6036dd68a",
+              "rect": {
+                "width": 780,
+                "height": 171,
+                "x": 48,
+                "y": 152
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_content01_text01",
+                    "filename": "l_tab01_content01_text01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 780,
+                      "height": 171
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d08963032153d3d71e",
+              "name": "l_btnType2",
+              "sourceId": "930d7421-d54c-4c3e-a554-f6de28321643",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 48,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnType2",
+                    "filename": "l_btnType2-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d08963032153d3d721",
+              "name": "l_btnLung",
+              "sourceId": "00b21c2c-ab28-4762-9fee-2bd105e98d15",
+              "rect": {
+                "width": 184,
+                "height": 43,
+                "x": 240,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnLung",
+                    "filename": "l_btnLung-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 43
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d08963032153d3d724",
+              "name": "l_btnExacerbations",
+              "sourceId": "75549e2d-955c-47c6-90df-34b071e4fb41",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 432,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnExacerbations",
+                    "filename": "l_btnExacerbations-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d08963032153d3d727",
+              "name": "l_btnACQ",
+              "sourceId": "d45ccb62-a00b-46c8-ba50-5a8ad40340d5",
+              "rect": {
+                "width": 160,
+                "height": 40,
+                "x": 624,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnACQ",
+                    "filename": "l_btnACQ-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 160,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d08963032153d3d72a",
+              "name": "l_btnStudy",
+              "sourceId": "38d1ce14-5a8b-4811-a4f9-b0e23251196f",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 792,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnStudy",
+                    "filename": "l_btnStudy-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d08963032153d3d72d",
+              "name": "l_tab01_content01_modalObject_legal01_open",
+              "sourceId": "e4fc9b63-b062-456a-8df8-e43c83e406d7",
+              "rect": {
+                "width": 1008,
+                "height": 56,
+                "x": 8,
+                "y": 704
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_content01_modalObject_legal01_open",
+                    "filename": "l_tab01_content01_modalObject_legal01_open-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 56
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d08963032153d3d733",
+              "name": "l_tab01_content01_btnsTab",
+              "sourceId": "29a2a22f-63a0-4c8d-9977-5915c8cfdd5d",
+              "rect": {
+                "width": 540,
+                "height": 32,
+                "x": 242,
+                "y": 104
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_content01_btnsTab",
+                    "filename": "l_tab01_content01_btnsTab-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 558,
+                      "height": 50
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d08963032153d3d73a",
+              "name": "dontExport",
+              "sourceId": "c350aaa0-89d8-4542-b343-126231957002",
+              "rect": {
+                "width": 560,
+                "height": 48,
+                "x": 464,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28d08963032153d3d756",
+              "name": "Config box",
+              "sourceId": "eec87e2b-dbe4-4d6f-96b9-93871a9fb6fa",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.2.P2_PatientTypes_Type2Asthma_LungFunction”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df9c87aad71a1fcc8d727a",
+        "name": "1.2.0.0.0.P2.3.1.0_PatientTypes_Exacerbations_Biomarker",
+        "config": {
+          "slideId": "1.2.P3_PatientTypes_Type2Asthma_Exacerbations",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28d3020bd8205161f79c",
+              "name": "l_tab01_content01_imgBg",
+              "sourceId": "27454968-898a-42b3-97f4-a6bba0ae568c",
+              "rect": {
+                "width": 1008,
+                "height": 672,
+                "x": 8,
+                "y": 88
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_content01_imgBg",
+                    "filename": "l_tab01_content01_imgBg-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 672
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d3020bd8205161f7a4",
+              "name": "l_btnType2",
+              "sourceId": "bb7cd6dc-01f3-4cc4-b9ac-c89f9a91e2d7",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 48,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnType2",
+                    "filename": "l_btnType2-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d3020bd8205161f7a7",
+              "name": "l_btnLung",
+              "sourceId": "fdeefcc7-4811-43e6-ac99-668decde98dd",
+              "rect": {
+                "width": 184,
+                "height": 48,
+                "x": 240,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnLung",
+                    "filename": "l_btnLung-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d3020bd8205161f7aa",
+              "name": "l_btnExacerbations",
+              "sourceId": "15616b70-aef5-4bdb-b450-0ade9a7a51ad",
+              "rect": {
+                "width": 184,
+                "height": 45,
+                "x": 432,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnExacerbations",
+                    "filename": "l_btnExacerbations-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 45
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d3020bd8205161f7ad",
+              "name": "l_btnACQ",
+              "sourceId": "b2666887-011d-45db-a806-0f77aaf50e73",
+              "rect": {
+                "width": 160,
+                "height": 40,
+                "x": 624,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnACQ",
+                    "filename": "l_btnACQ-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 160,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d3020bd8205161f7b0",
+              "name": "l_btnStudy",
+              "sourceId": "caeb32bf-4475-4d5b-82ef-11edab4a7467",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 792,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnStudy",
+                    "filename": "l_btnStudy-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d3020bd8205161f7b3",
+              "name": "l_tab01_content01_text01",
+              "sourceId": "cd656b95-d7f0-4031-b036-71288eda5c61",
+              "rect": {
+                "width": 780,
+                "height": 171,
+                "x": 48,
+                "y": 152
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_content01_text01",
+                    "filename": "l_tab01_content01_text01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 780,
+                      "height": 171
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d3020bd8205161f7b6",
+              "name": "l_tab01_content01_text02",
+              "sourceId": "63ad6f24-fbef-472e-a4e1-c8fc5d783cb9",
+              "rect": {
+                "width": 640,
+                "height": 288,
+                "x": 48,
+                "y": 341
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_content01_text02",
+                    "filename": "l_tab01_content01_text02-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 658,
+                      "height": 306
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d3020bd8205161f7db",
+              "name": "l_tab01_content01_img01",
+              "sourceId": "fd8b9b80-f305-418b-8d47-e046f969120f",
+              "rect": {
+                "width": 536,
+                "height": 511,
+                "x": 480,
+                "y": 249
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_content01_img01",
+                    "filename": "l_tab01_content01_img01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 536,
+                      "height": 511
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d3020bd8205161f7df",
+              "name": "l_tab01_content01_modalObject_legal01_open",
+              "sourceId": "9f613678-5043-45d2-8c51-095c12f92c4a",
+              "rect": {
+                "width": 1008,
+                "height": 56,
+                "x": 8,
+                "y": 704
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_content01_modalObject_legal01_open",
+                    "filename": "l_tab01_content01_modalObject_legal01_open-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 56
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d3020bd8205161f7e5",
+              "name": "dontExport",
+              "sourceId": "026f7341-1783-42e0-8b8f-521585419c94",
+              "rect": {
+                "width": 560,
+                "height": 48,
+                "x": 464,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28d3020bd8205161f801",
+              "name": "l_tab01_content01_btnsTab",
+              "sourceId": "a7b9251b-191f-477c-8900-ef1c713d9b52",
+              "rect": {
+                "width": 540,
+                "height": 32,
+                "x": 242,
+                "y": 104
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_content01_btnsTab",
+                    "filename": "l_tab01_content01_btnsTab-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 558,
+                      "height": 50
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d3020bd8205161f808",
+              "name": "Config box",
+              "sourceId": "6b75017f-8e54-4650-9ac2-6d39eb92c8c9",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.2.P3_PatientTypes_Type2Asthma_Exacerbations”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df9c99a66a290fd3004ce8",
+        "name": "1.2.0.0.0.P2.4.0.0_PatientTypes_AQ5",
+        "config": {
+          "slideId": "1.2.P4_PatientTypes_Type2Asthma_ACQ5",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28d5537a12201057b26d",
+              "name": "l_btnType2",
+              "sourceId": "c37ade8e-2b7c-41f9-ac06-d7ca98c52c93",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 48,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnType2",
+                    "filename": "l_btnType2-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5537a12201057b270",
+              "name": "l_btnLung",
+              "sourceId": "7cd5e742-13e0-41e7-8b08-c248369b2ce5",
+              "rect": {
+                "width": 184,
+                "height": 48,
+                "x": 240,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnLung",
+                    "filename": "l_btnLung-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5537a12201057b273",
+              "name": "l_btnExacerbations",
+              "sourceId": "b0231662-572c-4337-b0e0-2c67b262a415",
+              "rect": {
+                "width": 184,
+                "height": 48,
+                "x": 432,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnExacerbations",
+                    "filename": "l_btnExacerbations-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5537a12201057b276",
+              "name": "l_btnACQ",
+              "sourceId": "a807cf28-2643-45da-8d2c-c070c49d4aae",
+              "rect": {
+                "width": 160,
+                "height": 48,
+                "x": 624,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnACQ",
+                    "filename": "l_btnACQ-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 160,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5537a12201057b279",
+              "name": "l_btnStudy",
+              "sourceId": "ded805dc-4bea-40ac-ae9a-fd7ed42fd003",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 792,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnStudy",
+                    "filename": "l_btnStudy-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5537a12201057b27c",
+              "name": "l_imgBgPopup",
+              "sourceId": "a3326f67-096d-41a8-b723-c6bda43d3d86",
+              "rect": {
+                "width": 1008,
+                "height": 672,
+                "x": 8,
+                "y": 88
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_imgBgPopup",
+                    "filename": "l_imgBgPopup-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 672
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5537a12201057b284",
+              "name": "l_text01",
+              "sourceId": "11beb3fa-55bc-48da-826a-3d87a38d98cb",
+              "rect": {
+                "width": 632,
+                "height": 171,
+                "x": 48,
+                "y": 104
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text01",
+                    "filename": "l_text01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 632,
+                      "height": 171
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5537a12201057b287",
+              "name": "l_modalObject_legal_open",
+              "sourceId": "3467db52-d54b-43ab-95e7-e292d67edefd",
+              "rect": {
+                "width": 1008,
+                "height": 40,
+                "x": 8,
+                "y": 720
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal_open",
+                    "filename": "l_modalObject_legal_open-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5537a12201057b28d",
+              "name": "l_text02",
+              "sourceId": "6d6c6f56-8e0e-4657-8c28-d385ada84abf",
+              "rect": {
+                "width": 536,
+                "height": 170,
+                "x": 48,
+                "y": 296
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text02",
+                    "filename": "l_text02-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 554,
+                      "height": 186
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5537a12201057b29c",
+              "name": "l_text03",
+              "sourceId": "a44fe891-e704-41ee-9c2c-cb6dff1b9d9c",
+              "rect": {
+                "width": 535.999755859375,
+                "height": 208,
+                "x": 48.000244140625,
+                "y": 480
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text03",
+                    "filename": "l_text03-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 554,
+                      "height": 219
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5537a12201057b2a7",
+              "name": "dontExport",
+              "sourceId": "57d6cf41-4c43-4827-ae69-580e8d1ad676",
+              "rect": {
+                "width": 560,
+                "height": 48,
+                "x": 464,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28d5537a12201057b2c3",
+              "name": "Config box",
+              "sourceId": "dd2186b8-23b2-4a33-a425-afe7dbfdb4dc",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.2.P4_PatientTypes_Type2Asthma_ACQ5”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df9ca1c833f41f6127cf7d",
+        "name": "1.2.0.0.0.P2.5.0.0_PatientTypes_StudyDesign",
+        "config": {
+          "slideId": "1.2.P5_PatientTypes_Type2Asthma_StudyDesign",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28d5acf9b92123201886",
+              "name": "l_imgBgPopup",
+              "sourceId": "76cd8dff-f03a-4a17-89e5-ee0d2132dcc4",
+              "rect": {
+                "width": 1008,
+                "height": 672,
+                "x": 8,
+                "y": 88
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_imgBgPopup",
+                    "filename": "l_imgBgPopup-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 672
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5acf9b9212320188e",
+              "name": "l_btnType2",
+              "sourceId": "35451ef0-9b06-4fed-8300-4147b823f42c",
+              "rect": {
+                "width": 184,
+                "height": 40,
+                "x": 48,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnType2",
+                    "filename": "l_btnType2-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5acf9b92123201891",
+              "name": "l_btnLung",
+              "sourceId": "2e9a860d-ea28-4673-b37e-fdc61d471a08",
+              "rect": {
+                "width": 184,
+                "height": 48,
+                "x": 240,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnLung",
+                    "filename": "l_btnLung-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5acf9b92123201894",
+              "name": "l_btnExacerbations",
+              "sourceId": "afb745e8-8566-4659-a29e-16c3b26aa7b3",
+              "rect": {
+                "width": 184,
+                "height": 48,
+                "x": 432,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnExacerbations",
+                    "filename": "l_btnExacerbations-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5acf9b92123201897",
+              "name": "l_btnACQ",
+              "sourceId": "f4b8c267-4253-4778-b754-59f98f4d4011",
+              "rect": {
+                "width": 160,
+                "height": 40,
+                "x": 624,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnACQ",
+                    "filename": "l_btnACQ-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 160,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5acf9b9212320189a",
+              "name": "l_btnStudy",
+              "sourceId": "7dac4c0e-e577-4a12-8ab4-6b455bcc481d",
+              "rect": {
+                "width": 184,
+                "height": 48,
+                "x": 792,
+                "y": 48
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_btnStudy",
+                    "filename": "l_btnStudy-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 184,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5acf9b9212320189d",
+              "name": "l_tab01_cover_btn01",
+              "sourceId": "2a807dbd-0ea1-4d37-947c-a133f839cf6f",
+              "rect": {
+                "width": 216,
+                "height": 40,
+                "x": 776,
+                "y": 304
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_tab01_cover_btn01",
+                    "filename": "l_tab01_cover_btn01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 234,
+                      "height": 58
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5acf9b921232018a3",
+              "name": " l_tab01_cover_btn02",
+              "sourceId": "861fa781-26e2-4324-8968-839e5504c52c",
+              "rect": {
+                "width": 216,
+                "height": 40,
+                "x": 776,
+                "y": 352
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": " l_tab01_cover_btn02",
+                    "filename": " l_tab01_cover_btn02-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 234,
+                      "height": 58
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5acf9b921232018a9",
+              "name": "l_text01",
+              "sourceId": "08c52855-ab1c-4436-93bd-8f51b0761c7c",
+              "rect": {
+                "width": 848,
+                "height": 170,
+                "x": 48,
+                "y": 104
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text01",
+                    "filename": "l_text01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 848,
+                      "height": 170
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5acf9b921232018ac",
+              "name": "l_text02",
+              "sourceId": "abadbded-67e6-4f46-94ea-3271fcb199c0",
+              "rect": {
+                "width": 703.999755859375,
+                "height": 256,
+                "x": 48.000244140625,
+                "y": 292
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text02",
+                    "filename": "l_text02-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 722,
+                      "height": 267
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5acf9b921232018db",
+              "name": "l_text03",
+              "sourceId": "db65f9ba-892e-4260-afe1-3c558334984b",
+              "rect": {
+                "width": 703.999755859375,
+                "height": 148,
+                "x": 48.000244140625,
+                "y": 556
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_text03",
+                    "filename": "l_text03-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 722,
+                      "height": 159
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5acf9b921232018ef",
+              "name": "l_img01",
+              "sourceId": "3704ccc8-d187-408f-a49d-093290e28140",
+              "rect": {
+                "width": 305,
+                "height": 344,
+                "x": 711,
+                "y": 416
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_img01",
+                    "filename": "l_img01-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 305,
+                      "height": 344
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5acf9b921232018f3",
+              "name": "l_modalObject_legal_open",
+              "sourceId": "97ad0ad1-da7b-4ba0-a2ff-debafaef0b32",
+              "rect": {
+                "width": 1008,
+                "height": 48,
+                "x": 8,
+                "y": 712
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal_open",
+                    "filename": "l_modalObject_legal_open-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1008,
+                      "height": 48
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28d5acf9b921232018f9",
+              "name": "dontExport",
+              "sourceId": "0ae9a524-7cc3-4fbe-8784-673e6ed31f67",
+              "rect": {
+                "width": 560,
+                "height": 48,
+                "x": 464,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28d5acf9b92123201915",
+              "name": "Config box",
+              "sourceId": "ee15e7f2-7f80-4817-9648-5c8d5e8215c5",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.2.P5_PatientTypes_Type2Asthma_StudyDesign”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df9ca2b18ef12191a19fb1",
+        "name": "1.2.0.0.0.P1.1.0.0_PatientTypes_Type2Asthma_Refs",
+        "config": {
+          "slideId": "1.2.P0_PatientTypes_Type2Asthma",
+          "visualizationMode": "Landscape"
+        },
+        "layers": {
+          "data": [
+            {
+              "id": "651c28dca42e8a2046841b01",
+              "name": "dontExport",
+              "sourceId": "dae83635-c00f-4cfc-bd22-1a93b84d0c53",
+              "rect": {
+                "width": 1024,
+                "height": 416,
+                "x": 0,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              }
+            },
+            {
+              "id": "651c28dca42e8a2046841b0d",
+              "name": "l_references",
+              "sourceId": "448f2dce-91c4-4471-8425-ee998383cb99",
+              "rect": {
+                "width": 1024,
+                "height": 221,
+                "x": 0,
+                "y": 144
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_references",
+                    "filename": "l_references-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1024,
+                      "height": 221
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28dca42e8a2046841b13",
+              "name": "Config box",
+              "sourceId": "8a448abb-d9e2-465b-ae10-231392dd981d",
+              "rect": {
+                "width": 744,
+                "height": 1,
+                "x": 280,
+                "y": 0
+              },
+              "assets": {
+                "data": []
+              },
+              "content": "{\n  “slideId”: “1.2.P0_PatientTypes_Type2Asthma”,\n  “visualizationMode”: “Landscape”\n}"
+            }
+          ]
+        }
+      },
+      {
+        "id": "64df9ca2e3f9570e8dda8813",
+        "name": "1.2.0.0.0.P2.1.1.0_PatientTypes_Type2Asthma_ElevatedBiomarkers_Notes",
+        "config": null,
+        "layers": {
+          "data": [
+            {
+              "id": "651c28dc1dd50b204f42777b",
+              "name": "l_modalObject_legal",
+              "sourceId": "dede9cf2-b63d-4778-8fd2-dcea15138161",
+              "rect": {
+                "width": 1024,
+                "height": 304,
+                "x": 0,
+                "y": 464
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal",
+                    "filename": "l_modalObject_legal-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 1042,
+                      "height": 322
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "651c28dc1dd50b204f42777e",
+              "name": "l_modalObject_legal_close",
+              "sourceId": "3c302d9b-b0ae-4209-b8ea-827ef821aebe",
+              "rect": {
+                "width": 40,
+                "height": 40,
+                "x": 976,
+                "y": 472
+              },
+              "assets": {
+                "data": [
+                  {
+                    "displayName": "l_modalObject_legal_close",
+                    "filename": "l_modalObject_legal_close-1x.png",
+                    "format": "png",
+                    "density": 1,
+                    "actualSize": {
+                      "width": 40,
+                      "height": 40
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

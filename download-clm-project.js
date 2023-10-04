@@ -6,9 +6,10 @@ import { config } from "dotenv";
 import rateLimit from "axios-rate-limit";
 import { Command } from "commander";
 import pLimit from "p-limit";
+import Jimp from "jimp";
 
 // Set your dotenv config to the root directory where the .env file lives
-config({ path: "../../.env" });
+config({ path: ".env" });
 
 // Extract PAT and Workspace from .env
 const { PERSONAL_ACCESS_TOKEN } = process.env;
@@ -88,9 +89,18 @@ const downloadAsset = async ({ screenName, url, filename }, dir, progress) => {
     const { data } = await axios.get(url, { responseType: "stream" });
     await fs.mkdir(`${dir}/${screenName}`, { recursive: true });
     await fs.writeFile(`${dir}/${screenName}/${filename}`, data);
+
+    await Jimp.read(`${dir}/${screenName}/${filename}`)
+      .then((image) => {
+        mF.actualAssetSize({ screenName, filename }, image.bitmap.width, image.bitmap.height);
+      })
+      .catch((err) => {
+        activityLog.add(`Error reading image ${filename}`);
+        activityLog.add(err);
+      });
   } catch (err) {
-    console.log(`Error downloading ${screenName}`);
-    console.log(err.config.url);
+    activityLog.add(`Error downloading ${screenName}`);
+    activityLog.add(err.config.url);
   }
   progress.tick();
 };
@@ -124,10 +134,14 @@ let metadata = {
               filename: null,
               format: null,
               density: null,
+              actualSize: {
+                width: null,
+                height: null,
+              },
             },
             data: [],
           },
-          content: null
+          content: null,
         },
         data: [],
       },
@@ -167,7 +181,7 @@ const mF = {
 
         metadata.screens.data[screenIndex].layers.data.push(template);
       } else {
-        console.log(`Error: Unable to identify screen for layer ${layer.name}`);
+        activityLog.add(`Error: Unable to identify screen for layer ${layer.name}`);
       }
     });
     metadata.screens.data.forEach((screen) => {
@@ -187,10 +201,10 @@ const mF = {
           template.density = asset.density;
           metadata.screens.data[screenIndex].layers.data[layerIndex].assets.data.push(template);
         } else {
-          console.log(`Error: Unable to identify layer for asset ${asset.displayName}`);
+          activityLog.add(`Error: Unable to identify layer for asset ${asset.displayName}`);
         }
       } else {
-        console.log(`Error: Unable to identify screen for asset ${asset.displayName}`);
+        activityLog.add(`Error: Unable to identify screen for asset ${asset.displayName}`);
       }
     });
     metadata.screens.data.forEach((screen) => {
@@ -199,49 +213,91 @@ const mF = {
       });
     });
   },
+  actualAssetSize: (asset, width, height) => {
+    let screenIndex = metadata.screens.data.findIndex((screen) => screen.name === asset.screenName);
+    if (screenIndex !== -1) {
+      let layerIndex = metadata.screens.data[screenIndex].layers.data.findIndex((layer) => layer.assets.data.some((a) => a.filename === asset.filename));
+      if (screenIndex !== -1 && layerIndex !== -1) {
+        let assetIndex = metadata.screens.data[screenIndex].layers.data[layerIndex].assets.data.findIndex((a) => a.filename === asset.filename);
+        if (assetIndex !== -1) {
+          metadata.screens.data[screenIndex].layers.data[layerIndex].assets.data[assetIndex].actualSize.width = width;
+          metadata.screens.data[screenIndex].layers.data[layerIndex].assets.data[assetIndex].actualSize.height = height;
+
+          let layerWidth = metadata.screens.data[screenIndex].layers.data[layerIndex].rect.width;
+          let layerHeight = metadata.screens.data[screenIndex].layers.data[layerIndex].rect.height;
+
+          let tolerance = 3;
+
+          if (Math.abs(layerWidth - width) > tolerance || Math.abs(layerHeight - height) > tolerance) {
+            activityLog.add(
+              `Warning: rect dimensions for ${asset.filename} do not match actual file dimensions. Rect: ${layerWidth}x${layerHeight} Actual: ${width}x${height}`
+            );
+          }
+        } else {
+          activityLog.add(`Error: Unable to identify asset for filename ${asset.filename}`);
+        }
+      } else {
+        activityLog.add(`Error: Unable to identify layer for asset with filename ${asset.filename}`);
+      }
+    } else {
+      activityLog.add(`Error: Unable to identify screen asset with filename ${asset.filename}`);
+    }
+  },
   config: () => {
     metadata.screens.data.forEach((screen) => {
       let configLayer = screen.layers.data.find((layer) => layer.name === "Config box");
       if (configLayer) {
-        
         let configContents = configLayer.content;
         configContents = configContents.replaceAll("\n", "");
         configContents = configContents.replaceAll("“", '"');
         configContents = configContents.replaceAll("”", '"');
 
-        let configJSON 
+        let configJSON;
         try {
           configJSON = JSON.parse(configContents);
         } catch (err) {
-          console.log(`Error parsing JSON for screen ${screen.name}`);
-          console.log(err);
+          activityLog.add(`Error parsing JSON for screen ${screen.name}`);
+          activityLog.add(err);
         }
 
         screen.config = configJSON;
-
       } else {
-        console.log(`Error: Unable to find config layer for screen ${screen.name}`);
+        activityLog.add(`Error: Unable to find config layer for screen ${screen.name}`);
       }
     });
   },
   save: (folder, data) => {
     fs.writeFile(`${folder}/metadata.json`, JSON.stringify(data, null, 2), (err) => {
       if (err) {
-        console.log(err);
+        activityLog.add(err);
       }
     });
-  }
+  },
+};
+
+const activityLog = {
+  data: "",
+  add: (data) => {
+    console.log(data);
+    activityLog.data = activityLog.data + "\n" + data;
+  },
+  save: (folder) => {
+    fs.writeFile(`${folder}/log.txt`, activityLog.data, (err) => {
+      if (err) {
+        activityLog.add(err);
+      }
+    });
+  },
 };
 
 // add command line options
 program
   .requiredOption("-p, --projectId <projectId>", "Project ID")
-  .option("-s, --screenId <screenId>", null)
+  .option("-s, --screenId <screenId>", "Screen ID (optional)")
   .option("-mo, --metadataOnly", "Download metadata only (no assets)", false)
-  .option("-d, --directory <dir>", "Output directory", "Output")
   .option("-f, --formats <formats...>", "Formats to download", ["png", "jpg", "webp", "svg", "pdf"])
   .option("-e, --densities <density...>", "Density to download", ["1", "1.5", "2", "3", "4"])
-  .action(async ({ projectId, screenId, metadataOnly, directory, formats, densities }) => {
+  .action(async ({ projectId, screenId, metadataOnly, formats, densities }) => {
     mF.projectId(projectId);
 
     const { name: projectName } = await getProjectProperties(projectId);
@@ -265,6 +321,8 @@ program
       total: assets.flat().length,
     });
 
+    let directory = metadata.project.name.replaceAll("/", "-") + "__assets";
+
     // Remove existing Output folder and create new one at start of script
     await fs.rm(directory, { recursive: true, force: true });
     await fs.mkdir(directory);
@@ -278,6 +336,8 @@ program
     }
 
     mF.save(directory, metadata);
+
+    activityLog.save(directory);
   });
 
 program.parse(process.argv);

@@ -1,4 +1,6 @@
-# Zeplin Importer
+# Zeplin script: Download CLM project
+
+This command line tool utilizes the [Zeplin Node SDK](https://github.com/zeplin/javascript-sdk) download all assets in a project in a directory called "Output" and then creating a new directory within "Output" for each screen in your project. Zeplin supports SVG, PNG, PDF, JPG, and WEBP image formats depending on your project type. All formats will by download by default, but you can specify which formats you want downloaded in the command line options with `-f <formats>`. More examples below.
 
 ## Getting Started
 
@@ -8,12 +10,37 @@
 ```https://app.zeplin.io/workspace/WORKSPACE_ID/projects```
 
 ## Usage
-
-Install packages
+Get your Zeplin Project ID from the Web app, for example `https://app.zeplin.io/project/12345`
 
 ```console
-$ npm install
+$ cd scripts/download-assets
+$ node download-project-assets -projectId <project id> -directory <output directory>
 ```
 
-Navigate to the directory with the script to be used and read the Readme for any extra usage details for the script. 
+## Options
+Use the `--help` flag for more information on the options for the command line
 
+```console
+$ node download-project-assets --help
+Usage: download-project-assets [options]
+
+Options:
+  -p, --projectId <projectId>  Project ID
+  -d, --directory <dir>        Output directory
+  -f, --formats <formats...>   Formats to download (default:
+                               ["png","jpg","webp","svg","pdf"])
+  -h, --help                   display help for command
+```
+
+## Examples
+
+Download all asset formats from project 12345 into the "Output" (default) directory
+```console
+$ node download-project-assets --projectId 12345 
+```
+
+Download only SVG and PNG assets from project 12345 into the "Assets" directory
+
+```console
+$ node download-project-assets -p 12345 -d Assets -f svg png
+```

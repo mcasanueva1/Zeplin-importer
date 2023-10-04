@@ -323,7 +323,7 @@ program
 
     let directory = metadata.project.name.replaceAll("/", "-") + "__assets";
 
-    // Remove existing Output folder and create new one at start of script
+    // Remove existing Output folder and create new one at desktop
     await fs.rm(directory, { recursive: true, force: true });
     await fs.mkdir(directory);
 

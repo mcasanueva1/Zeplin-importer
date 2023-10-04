@@ -7,6 +7,7 @@ import rateLimit from "axios-rate-limit";
 import { Command } from "commander";
 import pLimit from "p-limit";
 import Jimp from "jimp";
+import path from "path";
 
 // Set your dotenv config to the root directory where the .env file lives
 config({ path: ".env" });
@@ -320,10 +321,10 @@ program
       width: 20,
       total: assets.flat().length,
     });
+    let desktopPath = path.join(process.env.HOME, "Desktop");
+    let directory = path.join(desktopPath, metadata.project.name.replaceAll("/", "-") + "__assets");
 
-    let directory = metadata.project.name.replaceAll("/", "-") + "__assets";
-
-    // Remove existing Output folder and create new one at desktop
+    // Remove existing Output folder and create new one
     await fs.rm(directory, { recursive: true, force: true });
     await fs.mkdir(directory);
 

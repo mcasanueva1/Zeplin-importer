@@ -28,17 +28,25 @@ const zeplin = new ZeplinApi(new Configuration({ accessToken: PERSONAL_ACCESS_TO
 
 const getProjectProperties = async (projectId) => {
   const { data } = await zeplin.projects.getProject(projectId);
-
   return data;
 };
 
 const getProjectScreens = async (projectId, screenId) => {
-  const { data } = await zeplin.screens.getProjectScreens(projectId);
+  let screensCount = metadata.project.screensCount;
+  let pageLimit = 30;
+  let screensDownloaded = 0;
+  let screensData = [];
+
+  do {
+    const { data } = await zeplin.screens.getProjectScreens(projectId, { offset: screensDownloaded, limit: pageLimit });
+    screensData = screensData.concat(data);
+    screensDownloaded += data.length;
+  } while (screensDownloaded < screensCount - 1);
 
   if (screenId) {
-    return data.filter((screen) => screen.id === screenId);
+    return screensData.filter((screen) => screen.id === screenId);
   } else {
-    return data;
+    return screensData;
   }
 };
 
@@ -112,6 +120,7 @@ let metadata = {
   project: {
     id: null,
     name: null,
+    screensCount: null,
   },
   screens: {
     template: {
@@ -156,6 +165,9 @@ const mF = {
   },
   projectName: (projectName) => {
     metadata.project.name = projectName;
+  },
+  projectScreens: (screensCount) => {
+    metadata.project.screensCount = screensCount;
   },
   screens: (screens) => {
     screens.forEach((screen) => {
@@ -301,8 +313,9 @@ program
   .action(async ({ projectId, screenId, metadataOnly, formats, densities }) => {
     mF.projectId(projectId);
 
-    const { name: projectName } = await getProjectProperties(projectId);
+    const { name: projectName, numberOfScreens: screensCount } = await getProjectProperties(projectId);
     mF.projectName(projectName);
+    mF.projectScreens(screensCount);
 
     const projectScreens = await getProjectScreens(projectId, screenId);
     mF.screens(projectScreens);

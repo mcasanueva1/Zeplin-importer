@@ -79,12 +79,15 @@ const getAssetData = async (screen, projectId, formats, densities) => {
       url,
       format,
       density,
-      filename: `${displayName.replaceAll("/", "-")}-${density}x.${format}`,
     }));
   });
 };
 
-const downloadAsset = async ({ screenName, url, filename }, dir, progress) => {
+const downloadAsset = async ({ screenName, url, displayName }, dir, progress) => {
+  let filename = metadata.screens.data
+    .find((screen) => screen.name === screenName)
+    .layers.data.find((layer) => layer.assets.data.length > 0 && layer.assets.data[0].displayName === displayName).assets.data[0].filename;
+
   try {
     const { data } = await axios.get(url, { responseType: "stream" });
     await fs.mkdir(`${dir}/${screenName}`, { recursive: true });
@@ -99,9 +102,9 @@ const downloadAsset = async ({ screenName, url, filename }, dir, progress) => {
         activityLog.add(err);
       });
   } catch (err) {
-    activityLog.add(`Error downloading ${screenName}`);
-    activityLog.add(err.config.url);
+    activityLog.add(`Error downloading ${filename}`);
   }
+  
   progress.tick();
 };
 
@@ -132,6 +135,7 @@ let metadata = {
           assets: {
             template: {
               displayName: null,
+              params: null,
               filename: null,
               format: null,
               density: null,
@@ -199,7 +203,8 @@ const mF = {
         if (screenIndex !== -1 && layerIndex !== -1) {
           let template = JSON.parse(JSON.stringify(metadata.screens.data[screenIndex].layers.data[layerIndex].assets.template));
           template.displayName = asset.displayName;
-          template.filename = asset.filename;
+          template.params = mF.assetNameAsParam(asset.displayName);
+          template.filename = mF.assetFileName(template.params, asset.format, layerIndex);
           template.format = asset.format;
           template.density = asset.density;
           metadata.screens.data[screenIndex].layers.data[layerIndex].assets.data.push(template);
@@ -244,6 +249,54 @@ const mF = {
       }
     } else {
       activityLog.add(`Error: Unable to identify screen asset with filename ${asset.filename}`);
+    }
+  },
+  assetNameAsParam: (displayName) => {
+    let nameAsArray;
+
+    //split displayName using [] as delimiter
+    if (displayName.includes("[")) {
+      nameAsArray = displayName.split("[");
+      nameAsArray = nameAsArray.map((part) => part.split("]"));
+      nameAsArray = nameAsArray.flat();
+    } else {
+      nameAsArray = [];
+    }
+
+    nameAsArray = nameAsArray.filter((part) => part !== "");
+
+    if (nameAsArray.length == 0) {
+      return null;
+    }
+
+    //for each array item, turn "key:value" into object
+    nameAsArray = nameAsArray.map((part) => {
+      let obj = {};
+      if (part.includes(":")) {
+        let key = part.split(":")[0];
+        let value = part.split(":")[1];
+        obj[key] = value;
+      } else {
+        obj[part] = true;
+      }
+      return obj;
+    });
+
+    //turn array into object
+    let nameAsObject = {};
+    nameAsArray.forEach((part) => {
+      let objKey = Object.keys(part)[0];
+      let objValue = part[objKey];
+      nameAsObject[objKey] = objValue;
+    });
+
+    return nameAsObject;
+  },
+  assetFileName: (params, format, layerIndex) => {
+    if (params && params.id) {
+      return `${params.id}.${format}`;
+    } else {
+      return `asset${layerIndex + 1}.${format}`;
     }
   },
   config: () => {
@@ -320,8 +373,12 @@ program
     //screens pagination loop
     let pageLimit = 30;
     let screensProcessed = 0;
+    let totalScreens = screensCount;
+
     do {
-      console.log(`Processing screens ${screensProcessed} to ${screensProcessed + pageLimit} of ${screensCount}`);
+      let batchSize = screensProcessed + pageLimit > totalScreens ? totalScreens : screensProcessed + pageLimit;
+
+      console.log(`Processing screens ${screensProcessed} to ${batchSize} of ${screensCount}`);
 
       const screensBatch = await getProjectScreens(projectId, screenId, screensProcessed, pageLimit);
       mF.screens(screensBatch);
@@ -348,13 +405,14 @@ program
         await Promise.all(downloadAssetPromises);
       }
 
-      screensProcessed += screensBatch.length;
-    } while (screensProcessed < screensCount - 1);
+      screensProcessed = screensProcessed + pageLimit < totalScreens ? screensProcessed + pageLimit : totalScreens - 1;
+    } while (screensProcessed < totalScreens - 1);
 
     //parse screens config
     mF.config();
 
     //save metadata and log
+    mF.cleanUp();
     mF.save(directory, metadata);
 
     activityLog.save(directory);

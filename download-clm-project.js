@@ -85,32 +85,54 @@ const getAssetData = async (screen, projectId, formats, densities) => {
 
 const downloadAsset = async ({ screenName, url, displayName }, dir, progress) => {
   let filename;
-  
+
   try {
     filename = metadata.screens.data
-    .find((screen) => screen.name === screenName)
-    .layers.data.find((layer) => layer.assets.data.length > 0 && layer.assets.data[0].displayName === displayName).assets.data[0].filename;
+      .find((screen) => screen.name === screenName)
+      .layers.data.find((layer) => layer.assets.data.length > 0 && layer.assets.data[0].displayName === displayName).assets.data[0].filename;
   } catch (err) {
     activityLog.add(screenName, `Error finding filename for ${displayName}`, err.message);
   }
 
+  let slideFolderPath = `${dir}/${screenName}`;
+  try {
+    await fs.mkdir(slideFolderPath, { recursive: true });
+  } catch (err) {}
+
   try {
     const { data } = await axios.get(url, { responseType: "stream" });
-    await fs.mkdir(`${dir}/${screenName}`, { recursive: true });
-    await fs.writeFile(`${dir}/${screenName}/${filename}`, data);
-
-    await Jimp.read(`${dir}/${screenName}/${filename}`)
-      .then((image) => {
-        mF.actualAssetSize({ screenName, filename }, image.bitmap.width, image.bitmap.height);
-      })
-      .catch((err) => {
-        activityLog.add(screenName, `Error reading image ${filename}`, err.message);
-      });
+    await fs.writeFile(`${slideFolderPath}/${filename}`, data);
   } catch (err) {
     activityLog.add(screenName, `Error downloading ${filename}`, err.message);
   }
-  
+
+  await Jimp.read(`${dir}/${screenName}/${filename}`)
+    .then((image) => {
+      mF.actualAssetSize({ screenName, filename }, image.bitmap.width, image.bitmap.height);
+    })
+    .catch((err) => {
+      activityLog.add(screenName, `Error reading image ${filename}`, err.message);
+    });
+
   progress.tick();
+};
+
+const downloadSnapshot = async (screen, dir) => {
+  let filename = `screen.png`;
+  let screenName = screen.name;
+  let url = screen.image.originalUrl;
+
+  let slideFolderPath = `${dir}/${screenName}`;
+  try {
+    await fs.mkdir(slideFolderPath, { recursive: true });
+  } catch (err) {}
+
+  try {
+    const { data } = await axios.get(url, { responseType: "stream" });
+    await fs.writeFile(`${slideFolderPath}/${filename}`, data);
+  } catch (err) {
+    activityLog.add(screenName, `Error downloading snapshot ${filename}`, err.message);
+  }
 };
 
 // metadata object to be saved to metadata.json
@@ -242,15 +264,17 @@ const mF = {
           let tolerance = 3;
 
           if (Math.abs(layerWidth - width) > tolerance || Math.abs(layerHeight - height) > tolerance) {
-            activityLog.add(metadata.screens.data[screenIndex].name,
-              `Warning: rect dimensions for ${asset.filename} do not match actual file dimensions. Rect: ${layerWidth}x${layerHeight} Actual: ${width}x${height}`, null
+            activityLog.add(
+              metadata.screens.data[screenIndex].name,
+              `Warning: rect dimensions for ${asset.filename} do not match actual file dimensions. Rect: ${layerWidth}x${layerHeight} Actual: ${width}x${height}`,
+              null
             );
           }
         } else {
-          activityLog.add(metadata.screens.data[screenIndex].name,`Error: Unable to identify asset for filename ${asset.filename}`, null);
+          activityLog.add(metadata.screens.data[screenIndex].name, `Error: Unable to identify asset for filename ${asset.filename}`, null);
         }
       } else {
-        activityLog.add(metadata.screens.data[screenIndex].name,`Error: Unable to identify layer for asset with filename ${asset.filename}`, null);
+        activityLog.add(metadata.screens.data[screenIndex].name, `Error: Unable to identify layer for asset with filename ${asset.filename}`, null);
       }
     } else {
       activityLog.add(null, `Error: Unable to identify screen asset with filename ${asset.filename}`, null);
@@ -376,7 +400,7 @@ program
     mF.projectName(projectName);
     mF.projectScreens(screensCount);
 
-    //output folde
+    //output folder
     let desktopPath = path.join(process.env.HOME, "Desktop");
     let directory = path.join(desktopPath, metadata.project.name.replaceAll("/", "-") + "__assets");
     await fs.rm(directory, { recursive: true, force: true });
@@ -411,10 +435,13 @@ program
 
       //download assets
       if (!metadataOnly) {
-        const limit = pLimit(20);
-        const downloadAssetPromises = assets.flat().map((asset) => limit(() => downloadAsset(asset, directory, assetsBar)));
-
+        const assetsLimit = pLimit(20);
+        const downloadAssetPromises = assets.flat().map((asset) => assetsLimit(() => downloadAsset(asset, directory, assetsBar)));
         await Promise.all(downloadAssetPromises);
+
+        const snapshotsLimit = pLimit(20);
+        const downloadSnapshotsPromises = screensBatch.flat().map((screen) => snapshotsLimit(() => downloadSnapshot(screen, directory)));
+        await Promise.all(downloadSnapshotsPromises);
       }
 
       screensProcessed = screensProcessed + pageLimit < totalScreens ? screensProcessed + pageLimit : totalScreens - 1;

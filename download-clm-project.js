@@ -84,9 +84,15 @@ const getAssetData = async (screen, projectId, formats, densities) => {
 };
 
 const downloadAsset = async ({ screenName, url, displayName }, dir, progress) => {
-  let filename = metadata.screens.data
+  let filename;
+  
+  try {
+    filename = metadata.screens.data
     .find((screen) => screen.name === screenName)
     .layers.data.find((layer) => layer.assets.data.length > 0 && layer.assets.data[0].displayName === displayName).assets.data[0].filename;
+  } catch (err) {
+    activityLog.add(screenName, `Error finding filename for ${displayName}`, err.message);
+  }
 
   try {
     const { data } = await axios.get(url, { responseType: "stream" });
@@ -98,11 +104,10 @@ const downloadAsset = async ({ screenName, url, displayName }, dir, progress) =>
         mF.actualAssetSize({ screenName, filename }, image.bitmap.width, image.bitmap.height);
       })
       .catch((err) => {
-        activityLog.add(`Error reading image ${filename}`);
-        activityLog.add(err);
+        activityLog.add(screenName, `Error reading image ${filename}`, err.message);
       });
   } catch (err) {
-    activityLog.add(`Error downloading ${filename}`);
+    activityLog.add(screenName, `Error downloading ${filename}`, err.message);
   }
   
   progress.tick();
@@ -188,7 +193,7 @@ const mF = {
 
         metadata.screens.data[screenIndex].layers.data.push(template);
       } else {
-        activityLog.add(`Error: Unable to identify screen for layer ${layer.name}`);
+        activityLog.add(null, `Error: Unable to identify screen for layer ${layer.name}`, null);
       }
     });
     metadata.screens.data.forEach((screen) => {
@@ -209,10 +214,10 @@ const mF = {
           template.density = asset.density;
           metadata.screens.data[screenIndex].layers.data[layerIndex].assets.data.push(template);
         } else {
-          activityLog.add(`Error: Unable to identify layer for asset ${asset.displayName}`);
+          activityLog.add(metadata.screens.data[screenIndex].name, `Error: Unable to identify layer for asset ${asset.displayName}`, null);
         }
       } else {
-        activityLog.add(`Error: Unable to identify screen for asset ${asset.displayName}`);
+        activityLog.add(null, `Error: Unable to identify screen for asset ${asset.displayName}`, null);
       }
     });
     metadata.screens.data.forEach((screen) => {
@@ -237,18 +242,18 @@ const mF = {
           let tolerance = 3;
 
           if (Math.abs(layerWidth - width) > tolerance || Math.abs(layerHeight - height) > tolerance) {
-            activityLog.add(
-              `Warning: rect dimensions for ${asset.filename} do not match actual file dimensions. Rect: ${layerWidth}x${layerHeight} Actual: ${width}x${height}`
+            activityLog.add(metadata.screens.data[screenIndex].name,
+              `Warning: rect dimensions for ${asset.filename} do not match actual file dimensions. Rect: ${layerWidth}x${layerHeight} Actual: ${width}x${height}`, null
             );
           }
         } else {
-          activityLog.add(`Error: Unable to identify asset for filename ${asset.filename}`);
+          activityLog.add(metadata.screens.data[screenIndex].name,`Error: Unable to identify asset for filename ${asset.filename}`, null);
         }
       } else {
-        activityLog.add(`Error: Unable to identify layer for asset with filename ${asset.filename}`);
+        activityLog.add(metadata.screens.data[screenIndex].name,`Error: Unable to identify layer for asset with filename ${asset.filename}`, null);
       }
     } else {
-      activityLog.add(`Error: Unable to identify screen asset with filename ${asset.filename}`);
+      activityLog.add(null, `Error: Unable to identify screen asset with filename ${asset.filename}`, null);
     }
   },
   assetNameAsParam: (displayName) => {
@@ -312,20 +317,19 @@ const mF = {
         try {
           configJSON = JSON.parse(configContents);
         } catch (err) {
-          activityLog.add(`Error parsing JSON for screen ${screen.name}`);
-          activityLog.add(err);
+          activityLog.add(screen.name, `Error parsing JSON for screen ${screen.name}`, err.message);
         }
 
         screen.config = configJSON;
       } else {
-        activityLog.add(`Error: Unable to find config layer for screen ${screen.name}`);
+        activityLog.add(screen.name, `Error: Unable to find config layer for screen ${screen.name}`, null);
       }
     });
   },
   save: (folder, data) => {
     fs.writeFile(`${folder}/__metadata.json`, JSON.stringify(data, null, 2), (err) => {
       if (err) {
-        activityLog.add(err);
+        activityLog.add(null, "Error: unable to save __metadata.json", err.message);
       }
     });
   },
@@ -335,15 +339,23 @@ const mF = {
 };
 
 const activityLog = {
-  data: "",
-  add: (data) => {
-    //console.log(data);
-    activityLog.data = activityLog.data + "\n" + data;
+  data: [],
+  add: (screenName, description, err) => {
+    if (!screenName) screenName = "unknown";
+
+    let screenIndex = activityLog.data.findIndex((screen) => screen.name === screenName);
+    if (screenIndex == -1) {
+      activityLog.data.push({ name: screenName, errors: [] });
+      screenIndex = activityLog.data.length - 1;
+    }
+    activityLog.data[screenIndex].errors.push({ description, err });
   },
   save: (folder) => {
-    fs.writeFile(`${folder}/__log.txt`, activityLog.data, (err) => {
+    activityLog.data.sort((a, b) => a.name.localeCompare(b.name));
+
+    fs.writeFile(`${folder}/__log.txt`, JSON.stringify(activityLog.data, null, 2), (err) => {
       if (err) {
-        activityLog.add(err);
+        activityLog.add(err.message);
       }
     });
   },

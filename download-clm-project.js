@@ -117,8 +117,8 @@ const downloadAsset = async ({ screenName, url, displayName }, dir, progress) =>
   progress.tick();
 };
 
-const downloadSnapshot = async (screen, dir) => {
-  let filename = `screen.png`;
+const downloadScreenshot = async (screen, dir) => {
+  let filename = `${screen.name}_screenshot.png`;
   let screenName = screen.name;
   let url = screen.image.originalUrl;
 
@@ -131,8 +131,16 @@ const downloadSnapshot = async (screen, dir) => {
     const { data } = await axios.get(url, { responseType: "stream" });
     await fs.writeFile(`${slideFolderPath}/${filename}`, data);
   } catch (err) {
-    activityLog.add(screenName, `Error downloading snapshot ${filename}`, err.message);
+    activityLog.add(screenName, `Error downloading screenshot ${filename}`, err.message);
   }
+
+  await Jimp.read(`${slideFolderPath}/${filename}`)
+  .then((image) => {
+    mF.screenshot(screenName, filename, image.bitmap.width, image.bitmap.height);
+  })
+  .catch((err) => {
+    activityLog.add(screenName, `Error reading screenshot ${filename}`, err.message);
+  });
 };
 
 // metadata object to be saved to metadata.json
@@ -177,6 +185,11 @@ let metadata = {
         },
         data: [],
       },
+      screenshot: {
+        filename: null,
+        width: null,
+        height: null,
+      }
     },
     data: [],
   },
@@ -328,6 +341,16 @@ const mF = {
       return `asset${layerIndex + 1}.${format}`;
     }
   },
+  screenshot: (screenName, filename, width, height) => {
+    let screenIndex = metadata.screens.data.findIndex((screen) => screen.name === screenName);
+    if (screenIndex !== -1) {
+      metadata.screens.data[screenIndex].screenshot.filename = filename;
+      metadata.screens.data[screenIndex].screenshot.width = width;
+      metadata.screens.data[screenIndex].screenshot.height = height;
+    } else {
+      activityLog.add(null, `Error: Unable to identify screen for screenshot ${filename}`, null);
+    }
+  },
   config: () => {
     metadata.screens.data.forEach((screen) => {
       let configLayer = screen.layers.data.find((layer) => layer.name === "Config box");
@@ -439,9 +462,9 @@ program
         const downloadAssetPromises = assets.flat().map((asset) => assetsLimit(() => downloadAsset(asset, directory, assetsBar)));
         await Promise.all(downloadAssetPromises);
 
-        const snapshotsLimit = pLimit(20);
-        const downloadSnapshotsPromises = screensBatch.flat().map((screen) => snapshotsLimit(() => downloadSnapshot(screen, directory)));
-        await Promise.all(downloadSnapshotsPromises);
+        const screenshotsLimit = pLimit(20);
+        const downloadScreenshotsPromises = screensBatch.flat().map((screen) => screenshotsLimit(() => downloadScreenshot(screen, directory)));
+        await Promise.all(downloadScreenshotsPromises);
       }
 
       screensProcessed = screensProcessed + pageLimit < totalScreens ? screensProcessed + pageLimit : totalScreens - 1;

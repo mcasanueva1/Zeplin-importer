@@ -83,13 +83,13 @@ const getAssetData = async (screen, projectId, formats, densities) => {
   });
 };
 
-const downloadAsset = async ({ screenName, url, displayName }, dir, progress) => {
+const downloadAsset = async ({ screenName, url, displayName, layerSourceId }, dir, progress) => {
   let filename;
 
   try {
     filename = metadata.screens.data
       .find((screen) => screen.name === screenName)
-      .layers.data.find((layer) => layer.assets.data.length > 0 && layer.assets.data[0].displayName === displayName).assets.data[0].filename;
+      .layers.data.find((layer) => layer.assets.data.length > 0 && layer.sourceId === layerSourceId && layer.assets.data[0].displayName === displayName).assets.data[0].filename;
   } catch (err) {
     activityLog.add(screenName, `Error finding filename for ${displayName}`, err.message);
   }
@@ -457,7 +457,7 @@ program
       });
 
       //download assets
-      if (!metadataOnly) {
+      if (!metadataOnly) {      
         const assetsLimit = pLimit(20);
         const downloadAssetPromises = assets.flat().map((asset) => assetsLimit(() => downloadAsset(asset, directory, assetsBar)));
         await Promise.all(downloadAssetPromises);

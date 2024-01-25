@@ -41,9 +41,11 @@ const getProjectScreens = async (projectId, screenId, offset, limit) => {
   }
 };
 
-const getLayersData = async (screen, projectId) => {
+const getLayersData = async (screen, projectId, sourceSize) => {
   const { id } = screen;
   const { data } = await zeplin.screens.getLatestScreenVersion(projectId, id);
+
+  let divider = sourceSize == "1x" ? 1 : 2; //1x: use actual layer size and position; 2x use half size and position (retina)
 
   return data.layers.flatMap((layer) => {
     return {
@@ -53,10 +55,10 @@ const getLayersData = async (screen, projectId) => {
       name: layer.name,
       type: layer.type,
       rect: {
-        width: layer.rect.width,
-        height: layer.rect.height,
-        x: layer.rect.x,
-        y: layer.rect.y,
+        width: Math.round(layer.rect.width / divider),
+        height: Math.round(layer.rect.height / divider),
+        x: Math.round(layer.rect.x / divider),
+        y: Math.round(layer.rect.y / divider),
       },
       content: layer.content,
     };
@@ -220,10 +222,10 @@ const mF = {
         template.id = layer.id;
         template.name = layer.name;
         template.sourceId = layer.sourceId;
-        template.rect.width = layer.rect.width;
-        template.rect.height = layer.rect.height;
-        template.rect.x = layer.rect.x;
-        template.rect.y = layer.rect.y;
+        template.rect.width = Math.round(layer.rect.width);
+        template.rect.height = Math.round(layer.rect.height);
+        template.rect.x = Math.round(layer.rect.x);
+        template.rect.y = Math.round(layer.rect.y);
         template.content = layer.content;
 
         metadata.screens.data[screenIndex].layers.data.push(template);
@@ -274,12 +276,17 @@ const mF = {
           let layerWidth = metadata.screens.data[screenIndex].layers.data[layerIndex].rect.width;
           let layerHeight = metadata.screens.data[screenIndex].layers.data[layerIndex].rect.height;
 
-          let tolerance = 3;
+          let density = metadata.screens.data[screenIndex].layers.data[layerIndex].assets.data[assetIndex].density;
 
-          if (Math.abs(layerWidth - width) > tolerance || Math.abs(layerHeight - height) > tolerance) {
+          let consideredAssetWidth = width/density;
+          let consideredAssetHeight = height/density;
+
+          let tolerance = 1;
+
+          if (Math.abs(layerWidth - consideredAssetWidth) > tolerance || Math.abs(layerHeight - consideredAssetHeight) > tolerance) {
             activityLog.add(
               metadata.screens.data[screenIndex].name,
-              `Warning: rect dimensions for ${asset.filename} do not match actual file dimensions. Rect: ${layerWidth}x${layerHeight} Actual: ${width}x${height}`,
+              `Warning: rect dimensions for ${asset.filename} do not match actual file dimensions. Rect: ${layerWidth}x${layerHeight} Actual: ${consideredAssetWidth}x${consideredAssetHeight}${density == 2 ? " (retina/2)" : ""}`,
               null
             );
           }
@@ -414,9 +421,17 @@ program
   .option("-s, --screenId <screenId>", "Screen ID (optional)")
   .option("-mo, --metadataOnly", "Download metadata only (no assets)", false)
   .option("-f, --formats <formats...>", "Formats to download", ["png", "jpg", "webp", "svg", "pdf"])
-  .option("-e, --densities <density...>", "Density to download", ["1", "1.5", "2", "3", "4"])
-  .action(async ({ projectId, screenId, metadataOnly, formats, densities }) => {
+  .option("-z, --sourceSize <sourceSize...>", "Source size", ["1x", "2x"])
+  .action(async ({ projectId, screenId, metadataOnly, formats, sourceSize }) => {
     mF.projectId(projectId);
+
+    //density based on project size
+    let densities;
+    if (sourceSize == "1x") {
+      densities = ["2"] //source size is 1x, download 2x density assets (retina)
+    } else {
+      densities = ["1"] //source size is 2x, download 1x assets (already retina)
+    }
 
     //project properties
     const { name: projectName, numberOfScreens: screensCount } = await getProjectProperties(projectId);
@@ -442,7 +457,7 @@ program
       const screensBatch = await getProjectScreens(projectId, screenId, screensProcessed, pageLimit);
       mF.screens(screensBatch);
 
-      const layers = await Promise.all(screensBatch.map(async (screen) => getLayersData(screen, projectId)));
+      const layers = await Promise.all(screensBatch.map(async (screen) => getLayersData(screen, projectId, sourceSize)));
       mF.layers(layers);
 
       const assets = await Promise.all(screensBatch.map(async (screen) => getAssetData(screen, projectId, formats, densities)));

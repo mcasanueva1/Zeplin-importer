@@ -276,12 +276,17 @@ const mF = {
           let layerWidth = metadata.screens.data[screenIndex].layers.data[layerIndex].rect.width;
           let layerHeight = metadata.screens.data[screenIndex].layers.data[layerIndex].rect.height;
 
-          let tolerance = 3;
+          let density = metadata.screens.data[screenIndex].layers.data[layerIndex].assets.data[assetIndex].density;
 
-          if (Math.abs(layerWidth - width) > tolerance || Math.abs(layerHeight - height) > tolerance) {
+          let consideredAssetWidth = width/density;
+          let consideredAssetHeight = height/density;
+
+          let tolerance = 1;
+
+          if (Math.abs(layerWidth - consideredAssetWidth) > tolerance || Math.abs(layerHeight - consideredAssetHeight) > tolerance) {
             activityLog.add(
               metadata.screens.data[screenIndex].name,
-              `Warning: rect dimensions for ${asset.filename} do not match actual file dimensions. Rect: ${layerWidth}x${layerHeight} Actual: ${width}x${height}`,
+              `Warning: rect dimensions for ${asset.filename} do not match actual file dimensions. Rect: ${layerWidth}x${layerHeight} Actual: ${consideredAssetWidth}x${consideredAssetHeight}${density == 2 ? " (retina/2)" : ""}`,
               null
             );
           }

@@ -437,6 +437,7 @@ program
     const { name: projectName, numberOfScreens: screensCount } = await getProjectProperties(projectId);
     mF.projectName(projectName);
     mF.projectScreens(screensCount);
+    console.log(`Downloading project ${projectName} (${screensCount} screens)`);
 
     //output folder
     let desktopPath = path.join(process.env.HOME, "Desktop");

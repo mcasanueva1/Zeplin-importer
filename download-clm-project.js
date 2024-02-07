@@ -91,7 +91,7 @@ const downloadAsset = async ({ screenName, url, displayName, layerSourceId }, di
   try {
     filename = metadata.screens.data
       .find((screen) => screen.name === screenName)
-      .layers.data.find((layer) => layer.assets.data.length > 0 && layer.sourceId === layerSourceId && layer.assets.data[0].displayName === displayName).assets.data[0].filename;
+      .layers.data.find((layer) => layer.assets.data.length > 0 && layer.sourceId === layerSourceId && layer.assets.data[0].displayName === displayName).assets.data[0].filename.trim();
   } catch (err) {
     activityLog.add(screenName, `Error finding filename for ${displayName}`, err.message);
   }
@@ -322,8 +322,8 @@ const mF = {
     nameAsArray = nameAsArray.map((part) => {
       let obj = {};
       if (part.includes(":")) {
-        let key = part.split(":")[0];
-        let value = part.split(":")[1];
+        let key = part.split(":")[0].trim();
+        let value = part.split(":")[1].trim();
         obj[key] = value;
       } else {
         obj[part] = true;
@@ -343,7 +343,7 @@ const mF = {
   },
   assetFileName: (params, format, layerIndex) => {
     if (params && params.id) {
-      return `${params.id}.${format}`;
+      return `${params.id.trim()}.${format}`;
     } else {
       return `asset${layerIndex + 1}.${format}`;
     }
